@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1760895709 source:/home/elsayed-mohamed/ITI-9-Month-Data/01-OOP Course/Day02/Lab2/Menu/main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<limits>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1761950321 source:/home/sayedmohamed/ITI-9-Month-Data/01-OOP Course/Day12/Lab12/StringOverloading/main.cpp
+	<iostream>
+	<cstring>
+	<cctype>
+

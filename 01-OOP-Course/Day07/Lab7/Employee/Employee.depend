@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1761383035 source:/home/sayedmohamed/ITI-9-Month-Data/01-OOP Course/Day07/Lab7/Employee/main.cpp
+	<iostream>
+	<cstring>
+
