@@ -1,0 +1,113 @@
+/* External Styles */
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+}
+
+/* .heading {
+	color: blue;
+} */
+
+h1 {
+	color: red;
+}
+
+/* h1.heading {
+	color: white;
+}
+
+h1.typography {
+	color: crimson;
+} */
+
+#main-heading {
+	color: green;
+	width: 500px;
+	height: 250px;
+	/* font-size: 10em; */
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+	padding: 20px;
+
+	border: 10px dashed blue;
+	/* outline: 10px solid pink; */
+
+	margin: 20px 20px 100px 40px;
+}
+
+#main-paragraph {
+	color: green;
+	font-size: 24px;
+	margin-top: 30px; /* Margin collapse */
+}
+
+p {
+}
+
+/* .typography {
+	color: blue;
+	font-size: 36px;
+	font-style: italic;
+} */
+
+h2.typography#secondary-heading {
+	font-family: "Courier New", Courier, monospace;
+	color: orange;
+}
+
+#about-link {
+	/* width: 5px;
+	height: 5px; */
+	/* display: inline-block; */
+}
+
+/* Units Absolute units, relative, viewport */
+
+/* Advanced Selectors */
+
+.main-container {
+	/* background-color: grey; */
+}
+
+/* Combinator selectors */
+/* 1) Descendant selector */
+
+div p {
+	font-size: large;
+	/* color: aqua; */
+	font-style: italic;
+}
+
+/* 2) direct child selector > */
+
+div > .duration {
+	color: red;
+	font-style: italic;
+}
+
+/* 3) ~ general sibling selector */
+
+/* h1 ~ p {
+	border: 5px solid green;
+} */
+
+/* 3) + direct sibling selector */
+
+h1 + p {
+	border: 5px solid green;
+}
+
+/* Pseudo-classes : & Pseudo elements :: - CSS Diner */
+
+/* (Landing-page) */
+/* Positioning */
+/* Float */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="https://httpbin.org/post" method="post">
+			<label for="firstName">First Name*</label>
+			<input
+				id="firstName"
+				name="first_name"
+				type="text"
+				minlength="4"
+				maxlength="10"
+				required
+				placeholder="e.g. Ahmed" />
+
+			<label for="lastName">Last Name*</label>
+			<input id="lastName" name="last_name" type="text" minlength="4" maxlength="10" required />
+
+			<label for="email">Email*</label>
+			<input id="email" name="email" type="email" minlength="6" maxlength="20" required />
+
+			<label for="password">Password*</label>
+			<input id="password" name="password" minlength="8" maxlength="20" required type="password" />
+
+			<label for="re-password">Re-Password*</label>
+			<input id="re-password" minlength="8" maxlength="20" required type="password" />
+
+			<label for="age">Age</label>
+			<input id="age" name="age" type="number" min="13" max="100" required />
+
+			<h2>Favorite Food</h2>
+
+			<label for="pizza">Pizza</label>
+			<input id="pizza" name="favorite_food" value="pizza" type="checkbox" />
+
+			<label for="pasta">Pasta</label>
+			<input id="pasta" name="favorite_food" value="pasta" type="checkbox" />
+
+			<label for="chicken">Chicken</label>
+			<input id="chicken" name="favorite_food" value="chicken" type="checkbox" />
+
+			<h2>Gender</h2>
+			<label for="male">Male</label>
+			<input id="male" name="gender" value="male" type="radio" />
+			<label for="female">Female</label>
+			<input id="female" name="gender" value="female" type="radio" />
+
+			<input type="range" />
+			<input type="date" />
+			<input type="file" />
+
+			<h2>City</h2>
+			<!-- <select name="city" multiple> -->
+			<select name="city" required>
+				<option value="" disabled selected>Please select a city</option>
+				<optgroup label="Delta">
+					<option value="zag">Zagazig</option>
+					<option>Cairo</option>
+					<option>Alexandria</option>
+				</optgroup>
+				<option>Port Said</option>
+				<option>Fakous</option>
+			</select>
+
+			<h2>Contact</h2>
+			<textarea></textarea>
+
+			<input type="submit" value="Sign Up" />
+			<input type="reset" value="Delete" />
+			<input type="button" value="Click" />
+
+			<!-- <button>submit</button> -->
+			<button>Submit</button>
+			<button type="reset">Reset</button>
+			<button type="button">Button</button>
+
+			<!-- Fieldset -->
+			<!-- Legend -->
+		</form>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+/* External Styles */
+
+* {
+	/* border: 3px red solid; */
+	color: blueviolet;
+}
+
+/* .heading {
+	color: blue;
+} */
+
+h1 {
+	color: red;
+}
+
+/* h1.heading {
+	color: white;
+}
+
+h1.typography {
+	color: crimson;
+} */
+
+/* #main-heading {
+	color: green;
+} */
+
+p {
+}
+
+/* .typography {
+	color: blue;
+	font-size: 36px;
+	font-style: italic;
+} */
+
+h2.typography#secondary-heading {
+	font-family: "Courier New", Courier, monospace;
+	color: orange;
+}
+
+#main-paragraph {
+	color: green;
+	font-size: 24px;
+}
