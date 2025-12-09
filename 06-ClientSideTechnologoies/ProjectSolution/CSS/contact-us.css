@@ -1,0 +1,73 @@
+.contact-us-section {
+  height: 32rem;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.contact-us-left-side {
+  float: left;
+  width: 50%;
+  height: 100%;
+  /* background-color: blue; */
+}
+.contact-us-right-side {
+  float: right;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.contact-us-right-side img {
+  height: auto;
+  position: absolute;
+  right: -180px;
+}
+
+.contact-us-left-side-form {
+  /* background-color: aqua; */
+  margin: 15px;
+  height: 450px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #b5a3a3;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  outline: none;
+  box-shadow: none;
+}
+
+input[name="message"] {
+  height: 100px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  vertical-align: bottom;
+}
+
+input[name="message"]::placeholder {
+  display: flex;
+  align-items: flex-end;
+  color: gray;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-bottom: 2px solid #b5a3a3;
+  box-shadow: none;
+}
+
+.send-btn {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 20px 80px;
+  font-size: large;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  background-color: rgb(255, 94, 0);
+}

@@ -1,0 +1,23 @@
+.testimonial {
+  height: 40rem;
+  width: 100%;
+}
+
+.testimonial-card {
+  margin-top: 85px;
+  height: 70%;
+  display: inline-block;
+  text-align: center;
+}
+
+.testimonial-card-title {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.testimonial-card-paragraph {
+  font-weight: 400;
+  font-family: sans-serif;
+}

@@ -1,0 +1,55 @@
+.our-services {
+  height: 50rem;
+  width: 100%;
+}
+
+#our-services-heading {
+  padding-top: 20px;
+  height: 20%;
+  text-align: center;
+}
+
+#our-services-cards {
+  height: 65%;
+}
+
+.our-services-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 100%;
+  margin: 0 1.5%;
+  text-align: center;
+  padding: 25px 15px;
+  border: 5px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.7s ease, border 0.7s ease;
+}
+
+.our-services-card:hover {
+  border-top-color: rgb(255, 94, 0);
+  transform: translateY(-5px);
+}
+
+.our-services-card img {
+  margin: 20px 0;
+}
+
+.our-services-card-name {
+  color: rgb(255, 94, 0);
+  font-size: larger;
+  margin: 15px 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.our-services-card-content {
+  font-size: large;
+  font-weight: 800;
+  font-family: fangsong;
+}
+#read-more-btn-div {
+  text-align: center;
+  margin-top: 30px;
+}

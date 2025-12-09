@@ -1,0 +1,23 @@
+.tasty-fruits-section {
+  height: 30rem;
+  width: 100%;
+  background-image: url("../images/tasty.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.tasty-fruits-section-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  width: 80%;
+  text-transform: uppercase;
+}
