@@ -1,0 +1,71 @@
+.second-welcome-section {
+  background-color: var(--lockscout-blue, #0044ff);
+  color: #fff;
+  padding: 40px 20px;
+  margin: 0 auto;
+  width: 90vw;
+  text-align: center;
+}
+
+.second-welcome-section-header {
+  margin-bottom: 30px;
+}
+
+/* 1. Mobile First: Stacked and Full Width */
+.signup-login-buttons {
+  display: flex;
+  flex-direction: column; /* Stacks buttons vertically */
+  gap: 15px; /* Space between the stacked buttons */
+  width: 100%;
+}
+
+.signup-login-buttons .sign-up,
+.signup-login-buttons .login {
+  width: 100%; /* Makes buttons fill the container width */
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-login-buttons .sign-up {
+  background-color: #fff;
+  color: var(--lockscout-blue, #0044ff);
+}
+
+.signup-login-buttons .login {
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .signup-login-buttons {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .signup-login-buttons .sign-up,
+  .signup-login-buttons .login {
+    width: 200px;
+    height: 50px;
+  }
+  .second-welcome-section {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .signup-login-buttons .login {
+    display: none;
+  }
+  .second-welcome-section {
+    width: 96%;
+  }
+}

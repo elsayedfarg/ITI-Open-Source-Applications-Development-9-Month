@@ -1,0 +1,116 @@
+.welcome-section {
+  background-color: var(--lockscout-blue);
+  color: #fff;
+  padding: 20px 15px;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.welcome-section-header {
+  width: 98%;
+}
+
+.welcome-section-heading {
+  text-transform: capitalize;
+}
+
+.welcome-section-paragraph {
+  width: 98%;
+  opacity: 0.6;
+}
+
+.input-and-submit {
+  width: 95%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-and-submit input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-and-submit input:focus {
+  border-color: var(--lockscout-blue);
+}
+
+.input-and-submit button {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 500;
+
+  background-color: var(--lockscout-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-and-submit button:hover {
+  background-color: #1e40af;
+}
+
+.subscribe {
+  margin-top: auto;
+  font-size: 14px;
+  opacity: 0.7;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .input-and-submit {
+    min-height: 120px;
+  }
+  .subscribe {
+    color: #000;
+    display: block;
+  }
+  .welcome-section {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    width: 97%;
+    height: 200px;
+    margin-top: 100px;
+    order: -1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .welcome-section-header {
+    width: 45vw;
+  }
+
+  .input-and-submit {
+    width: 45vw;
+  }
+}

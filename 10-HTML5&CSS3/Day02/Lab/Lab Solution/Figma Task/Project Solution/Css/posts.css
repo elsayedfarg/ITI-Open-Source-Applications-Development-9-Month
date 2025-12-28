@@ -1,0 +1,165 @@
+.posts-section {
+  margin-top: 50px;
+  text-align: center;
+
+  /* background-color: red; */
+}
+hr {
+  display: none;
+}
+
+.posts-heading {
+  text-transform: capitalize;
+  padding-top: 20px;
+}
+
+.posts-cards {
+  /* background-color: beige; */
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 92vw;
+  /* height: 100vh; */
+}
+
+.posts-cards .card {
+  width: 100%;
+  /* margin: 30px 0; */
+  /* background-color: brown; */
+}
+
+.posts-cards .card-image {
+  width: 100%;
+  /* background-color: #2563eb; */
+  height: 300px;
+}
+
+.posts-cards .card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-content {
+  padding: 20px 0;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.card-content-paragraph {
+  opacity: 2;
+}
+
+.card-content-date {
+  opacity: 0.7;
+  margin: 10px 0;
+}
+
+.learn-more {
+  color: var(--lockscout-blue);
+}
+
+@media (min-width: 768px) {
+  /* Hide extra cards */
+  #card-5,
+  #card-6 {
+    display: none;
+  }
+
+  .posts-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .posts-cards .card {
+    display: block;
+    width: 100%;
+  }
+
+  .posts-cards .card-image {
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .posts-cards .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-content {
+    padding-top: 15px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  hr {
+    display: block;
+    width: 130px;
+    opacity: 0.8;
+  }
+
+  .posts-cards > .card {
+    display: block;
+    width: 100%;
+  }
+
+  #card-5,
+  #card-6 {
+    display: block;
+  }
+
+  .posts-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🔥 REQUIRED */
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "card-1 card-2 card-3"
+      "card-4 card-5 card-6";
+    gap: 20px;
+  }
+
+  #card-1 {
+    grid-area: card-1;
+  }
+  #card-2 {
+    grid-area: card-2;
+  }
+  #card-3 {
+    grid-area: card-3;
+  }
+  #card-4 {
+    grid-area: card-4;
+  }
+  #card-5 {
+    grid-area: card-5;
+  }
+  #card-6 {
+    grid-area: card-6;
+  }
+
+  .posts-cards .card-image {
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .posts-cards .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-content {
+    padding-top: 15px;
+    text-align: left;
+  }
+}
