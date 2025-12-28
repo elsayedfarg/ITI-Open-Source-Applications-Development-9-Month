@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>box model</title>
+    <style>
+      /*
+            * box-sizing: content-box or border-box;
+            * *{ set negative spaces}
+            * border-width: 10px;
+        */
+        *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        p{
+          border: 2px solid black;
+          width: 200px;
+          height: 100px;
+        }
+
+        #secondP{
+          border-width: 15px;
+          padding: 20px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <!-- two p with id-->
+    <p id="firstP">First p</p>
+    <p id="secondP">second p</p>
+  </body>
+</html>

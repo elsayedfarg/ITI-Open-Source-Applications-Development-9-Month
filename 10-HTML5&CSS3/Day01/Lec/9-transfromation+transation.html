@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*
+        * transform:
+                rotate(deg) , + clock direction
+                translate(x,y) ,  values with px
+                scale(x,y) ,  like opacity take values without px (+, -, 0 to 1)
+                skew(deg)
+
+        * transform:rotate(0deg) scale(1.2); without , for multi values
+        */
+
+        /* 
+            * transition make changes in time
+            * transition: opacity 4s , transform 4s;
+            * timing function for transition : ex: ease-in , ease-out, ease-in-out 
+        */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        section {
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 50px auto;
+            /* transform: translate(50px,50px); */
+            /* transform: skew(20deg); */
+            /* transform: scale(1.2) translate(10px, 10px); */
+            transition: all 3s;
+        }
+
+        section:hover{
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Transformation -->
+    <section>
+        ITI Zag
+    </section>
+
+</body>
+
+</html>

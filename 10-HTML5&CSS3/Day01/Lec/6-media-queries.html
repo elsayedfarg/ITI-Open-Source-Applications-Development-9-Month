@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* @media device-name (screen | tv | print  | all) and conditions { css selectors}
+            *conditions min-width, max-width, both, orientation:landscape or portrait
+            *@media screen and (orientation:landscape)
+        */
+        /* @media device-name (screen | tv | print  | all) and conditions { css selectors} */
+
+        section{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 20px auto;
+            background-color: aqua;
+        }
+
+
+        /* @media screen and  (min-width: 768px) {
+            section{
+                background-color: rgb(124, 176, 176);
+                width: 500px;
+            }
+        } */
+
+        /* @media screen and (max-width: 1000px) and (min-width: 768px) {
+            section{
+                background-color: rgb(179, 14, 25);
+                width: 10px;
+
+            }
+        } */
+
+        @media screen and (orientation: portrait) {
+            section{
+                background-color: rgb(179, 14, 25);
+                width: 100px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>

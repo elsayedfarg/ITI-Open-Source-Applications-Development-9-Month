@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  width: 519px;
+  height: 480px;
+  margin: 50px auto;
+  border: 2px dashed #000;
+}
+
+.box {
+  width: 120px;
+  height: 80px;
+  position: absolute;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: transform 0.3s;
+}
+
+/* .orange {
+  background: orange;
+}
+.green {
+  background: yellowgreen;
+  animation-delay: 1.5s;
+}
+.blue {
+  background: deepskyblue;
+  animation-delay: 3s;
+}
+.yellow {
+  background: gold;
+  animation-delay: 4.5s;
+} */
+
+.box:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+    background: orange;
+  }
+  25% {
+    top: 0;
+    left: 400px;
+    background: yellowgreen;
+  }
+  50% {
+    top: 400px;
+    left: 400px;
+    background: deepskyblue;
+  }
+  75% {
+    top: 400px;
+    left: 0;
+    background: gold;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background: orange;
+  }
+}

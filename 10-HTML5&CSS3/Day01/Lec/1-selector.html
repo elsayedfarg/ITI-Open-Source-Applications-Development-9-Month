@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selectors</title>
+    <style>
+      /* 
+            * 1- *{
+            * 2- tag selectors
+            * 3- id selectors
+            * 4- class selectors
+            * 5- attribute selectors (class, class="", ^ start, * contain, $ end)
+            * 6- group selectors (Different types of selectors)
+            * 7- hierarchal selectors 
+                    (space (any), 
+                    > (any direct child), 
+                    ~ hiphone (any next outside),
+                    +  only one go next)
+            * 8- Pseudo Classes selectors (:hover, focus, :active)
+            * 9- Pseudo Element selectors (:after, :before)
+        
+            ***********************  new selectors ***********************
+            * nth-child(2n+1) , odd , even
+            * first-child, last-child
+            * first-of-type , last-of-type
+            * only-child
+            * only-of-type
+        */
+      p {
+        width: 100px;
+        border: 2px solid black;
+        margin: 10px auto;
+        text-align: center;
+      }
+
+      div p:only-of-type {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>ITI</p>
+    </div>
+    <div>
+      <span>Iti</span>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+      <p>7</p>
+      <p>8</p>
+      <p>9</p>
+      <p>10</p>
+    </div>
+    <!-- <div>
+      <p>ITI</p>
+    </div> -->
+  </body>
+</html>

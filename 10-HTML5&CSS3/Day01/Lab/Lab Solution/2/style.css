@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#first-section {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("./Images/Laptop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+#first-section-content {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+}
+
+#first-section-content h3 {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+#register-now-btn {
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px 0;
+  font-size: large;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  border-radius: 15px;
+  background-color: transparent;
+}
+#register-now-btn:hover {
+  background-color: rgb(238, 89, 8);
+}
+
+/*================================*/
+
+#second-section {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: antiquewhite; */
+  /* background-color: red; */
+}
+
+#second-section-header {
+  text-transform: capitalize;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+hr {
+  width: 12rem;
+  margin: 20px auto;
+}
+
+.second-section-card {
+  width: 100%;
+  text-align: center;
+}
+
+.second-section-card {
+  margin-bottom: 30px;
+}
+
+#second-section-paragraph {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+#social-bar {
+  position: absolute;
+  left: 0;
+  bottom: -70px;
+
+  width: 100%;
+  height: 70px;
+  background-color: lightcoral;
+
+  text-align: center;
+  padding: 5px 0;
+
+  transition: bottom 0.4s ease;
+}
+
+.image-wrapper:hover img {
+  transform: translateY(-70px);
+}
+
+.image-wrapper:hover #social-bar {
+  bottom: 0;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 7.5px;
+}
+
+ul li a {
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+}
+
+ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  #second-section-cards {
+    width: 95%;
+    height: 70vh;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #second-section-cards .second-section-card {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+    margin: 0 0.5%;
+  }
+
+  .image-wrapper img {
+    height: 45vh;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+
+  ul li a {
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-wrapper img {
+    height: 50vh;
+  }
+  ul li {
+    margin: 0 1rem;
+  }
+}
+
+/*================================*/
+#third-section {
+  min-height: 70vh;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.third-section-card {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.third-section-card p {
+  width: 80%;
+  margin: 20px auto;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.third-section-card img {
+  width: 80%;
+  height: 60vh;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 0.4s ease;
+}
+
+.third-section-card img:hover {
+  opacity: 0.7;
+}
+.third-section-card img:hover + p {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@media (min-width: 1024px) {
+  #third-section-cards {
+    text-align: center;
+  }
+
+  .third-section-card {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+    margin: 0 0.5%;
+  }
+
+  .third-section-card img {
+    height: 40vh;
+    width: 95%;
+  }
+}

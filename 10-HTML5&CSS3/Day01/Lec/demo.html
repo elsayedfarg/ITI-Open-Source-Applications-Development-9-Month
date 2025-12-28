@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITI</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #main {
+        width: 100%;
+      }
+
+      #hero {
+        background-image: url(labtop_bg2.jpg);
+        background-size: cover;
+        height: 100vh;
+        color: white;
+        line-height: 60px;
+        text-align: center;
+        padding-top: 20vh;
+      }
+
+      #hero > a {
+        text-decoration: none;
+        width: 200px;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: bisque;
+        border-radius: 20px;
+      }
+
+      #hero > p {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      #products {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 100px;
+      }
+
+      #products > div {
+        display: inline-block;
+      }
+
+      #products > div > img {
+        width: 30vw;
+        border-radius: 20px;
+      }
+
+      #products > div > p {
+        display: none;
+      }
+
+      #products > div:hover p {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <section id="hero">
+        <h1>ITI Zagazig</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatibus, accusantium. Accusamus, officiis dolore dolores atque
+          sequi porro obcaecati nesciunt adipisci itaque quod praesentium
+          suscipit possimus ad fuga nihil quisquam vero! Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Beatae, vero deserunt. Nisi at
+          accusantium iste fugiat non iure! Quisquam praesentium amet asperiores
+          sit, sed reiciendis beatae excepturi nihil quam sapiente!
+        </p>
+
+        <a href="">Register Now</a>
+      </section>
+
+      <section id="products">
+        <div>
+          <img src="labtop_bg2.jpg" alt="" />
+          <p>Product 1</p>
+        </div>
+        <div>
+          <img src="labtop_bg2.jpg" alt="" />
+          <p>Product 2</p>
+        </div>
+        <div>
+          <img src="labtop_bg2.jpg" alt="" />
+          <p>Product 3</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
