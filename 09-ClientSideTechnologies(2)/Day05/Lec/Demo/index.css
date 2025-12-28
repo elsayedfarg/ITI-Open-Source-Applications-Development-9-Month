@@ -1,0 +1,36 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: aqua;
+	padding: 10px;
+}
+
+nav {
+	background-color: blue;
+	padding: 10px;
+}
+
+ul {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	background-color: yellow;
+	padding: 15px;
+}
+
+li {
+	background-color: red;
+	padding: 20px;
+}
+
+a {
+	background-color: green;
+	padding: 10px;
+}
+
+li > a {
+}
+
+h1 {
+	color: grey;
+}

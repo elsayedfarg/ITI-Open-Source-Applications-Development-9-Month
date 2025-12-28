@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Slider</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="slider">
+      <div id="slides">
+        <div class="track">
+          <img class="slide" src="./Images/1.jpg" />
+          <img class="slide" src="./Images/2.jpg" />
+          <img class="slide" src="./Images/3.jpg" />
+          <img class="slide" src="./Images/4.jpg" />
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+      </div>
+    </section>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const track = document.querySelector(".track");
+      const nextBtn = document.getElementById("next");
+      const prevBtn = document.getElementById("prev");
+
+      let currentIndex = 2;
+      const gap = 20;
+
+      function updateSlider() {
+        slides.forEach((s) => s.classList.remove("active"));
+        slides[currentIndex].classList.add("active");
+
+        const slideWidth = slides[0].offsetWidth;
+        const containerWidth = track.parentElement.offsetWidth;
+
+        const centerOffset = containerWidth / 2 - slideWidth / 2;
+        const amountToMove = centerOffset - currentIndex * (slideWidth + gap);
+
+        track.style.transform = `translateX(${amountToMove}px)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < slides.length - 1) {
+          currentIndex++;
+          updateSlider();
+        } else {
+          currentIndex = 0;
+          updateSlider();
+        }
+      });
+
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        } else {
+          currentIndex = slides.length - 1;
+          updateSlider();
+        }
+      });
+
+      window.addEventListener("load", updateSlider);
+      window.addEventListener("resize", updateSlider);
+
+      // Task 2
+      slides.forEach((s) => {
+        s.addEventListener("mousedown", (e) => {
+          if (e.button === 2) e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>
