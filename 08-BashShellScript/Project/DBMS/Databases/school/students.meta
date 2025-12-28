@@ -1,0 +1,4 @@
+noofcolums: 2
+datatypes: int-string
+names: id-name
+pk: 0 
