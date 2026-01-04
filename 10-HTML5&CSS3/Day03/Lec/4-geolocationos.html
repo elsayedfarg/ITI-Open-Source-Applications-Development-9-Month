@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Geolocation with Google Maps</title>
+
+    <style>
+        /* Container for Google Map */
+        #mymap {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+
+    <script>
+        /* Success callback: executed when location is retrieved */
+        function getPosition(position) {
+            // 1-Extract latitude and longitude
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+
+            // 2-Create Google Maps LatLng object
+            var location = new google.maps.LatLng(lat, lon);
+
+            // 3-Map specifications (zoom & center)
+            var mapOptions = {
+                zoom: 17,
+                center: location
+            };
+
+            // 4-Display map inside div
+            new google.maps.Map(document.getElementById("mymap"), mapOptions);
+        }
+
+        /* Error callback */
+        function errorHandler(error) {
+            alert("Unable to retrieve your location");
+        }
+
+        /* Main function */
+        function getLocationData() {
+
+            // 1️⃣ Check Geolocation availability in user browser
+            if (navigator.geolocation) {
+
+                // 2️⃣ Ask for user permission
+                navigator.geolocation.getCurrentPosition(
+                    getPosition,
+                    errorHandler
+                );
+
+            } else {
+                document.getElementById("mymap").innerText =
+                    "Geolocation is not supported in this browser";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Trigger button -->
+    <input type="button" value="Get Location" onclick="getLocationData()">
+
+    <!-- Map container -->
+    <div id="mymap"></div>
+</body>
+</html>
