@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Main container */
+main {
+  width: 90%;
+  max-width: 1500px;
+  background: #1f1f2e;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Top bar */
+.get-products-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #6a5cff, #8f84ff);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(106, 92, 255, 0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Select box */
+select {
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background-color: #2a2a3d;
+  color: #fff;
+  border: 1px solid #3b3b55;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+select:hover {
+  border-color: #6a5cff;
+}
+
+select:focus {
+  border-color: #8f84ff;
+  box-shadow: 0 0 0 3px rgba(143, 132, 255, 0.25);
+}
+
+/* Disabled default option */
+option:disabled {
+  color: #aaa;
+}
+
+/* Product info section */
+.product-info {
+  background: #2a2a3d;
+  min-height: 150px;
+  border-radius: 12px;
+  padding: 20px;
+  color: #dcdcff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.btn-disabled {
+  background: gray !important ;
+}
+
+.btn-disabled :hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.product-card img {
+  width: 400px;
+  margin: 0 auto;
+}
