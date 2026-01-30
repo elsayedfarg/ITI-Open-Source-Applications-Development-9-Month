@@ -1,0 +1,259 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+/*============================================= HEADER-SECTION =============================================*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  border-bottom: 1px solid #f0f2f4;
+  background-color: var(--primary-light);
+  padding: 0.75rem 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary-dark);
+}
+
+.logo-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-blue);
+  display: flex;
+}
+
+.logo-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.register-btn {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  background-color: var(--primary-blue);
+  color: var(--primary-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+}
+
+.register-btn a {
+  color: var(--primary-light);
+}
+
+.register-btn:hover {
+  background-color: var(--primary-blue-dark);
+  opacity: 0.9;
+}
+
+/*============================================= FORM-CARD =============================================*/
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  letter-spacing: -0.02em;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+}
+
+.input-container {
+  display: flex;
+  align-items: stretch;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: var(--primary-light);
+  transition: all 0.2s;
+}
+
+.input-container:focus-within {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  appearance: none;
+  background-color: transparent;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.form-input::placeholder {
+  color: var(--text-light);
+}
+
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    to right,
+    var(--primary-blue),
+    var(--primary-blue-dark)
+  );
+  height: 3.5rem;
+  color: var(--primary-light);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+  filter: brightness(110%);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.bottom-prompt {
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid #f0f2f4;
+  padding-top: 1.5rem;
+}
+
+.prompt-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.prompt-link {
+  color: var(--primary-blue);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.prompt-link:hover {
+  text-decoration: underline;
+}
+
+/*============================================= BANNER =============================================*/
+
+.banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 1000;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.banner.success {
+  background-color: #28a745;
+}
+
+.banner.error {
+  background-color: #dc3545;
+}
+
+.banner.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: var(--primary-blue);
+}
+
+.password-toggle .material-symbols-outlined {
+  font-size: 1.25rem;
+}

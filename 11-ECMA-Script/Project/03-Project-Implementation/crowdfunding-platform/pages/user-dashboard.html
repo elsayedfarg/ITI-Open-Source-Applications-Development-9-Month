@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard - Crowdfund</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%232563eb%22>🏠👤</text></svg>"
+    />
+    <!-- font link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Symbols link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/user-dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-left">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <h2>User Panel</h2>
+          </a>
+        </div>
+        <div class="header-right">
+          <button class="menu-toggle" id="menuToggle">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+
+          <div class="user-info">
+            <div class="user-text">
+              <p id="user-name" class="user-name">Sayed mohamed</p>
+              <p id="user-role" class="user-role">user</p>
+            </div>
+            <div
+              class="user-avatar"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCL_EwuLso93BHxOjUImnCavSBx_PPKbXmt-0laeV4NTmH8magsJUNzKz4FxqKqlGaWOCk3qpgpLx3QhpOpaCl7PDvX3TZ-aohoMA7lZHDB0C09IwBWlgi4lxaEHYv2fbf6IVOFin8uuKEDZ2PeFnkBbGD2U_5G6zSH72b8GXzZ5xx3PYhS4lFDHAtZQsbu0sBJOFDBW9NZi8-ofnrE7rU0Pkd55-lnfB7QtQL3Oa8EDHBn1DTfQc_OWuCIH3PY962FT5MhU5S-JBQi&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="container">
+      <aside>
+        <nav>
+          <a href="#" class="active">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+          <a href="./mycampaigns.html">
+            <span class="material-symbols-outlined">campaign</span>
+            <span>My Campaigns</span>
+          </a>
+          <a href="#" id="my-pledges-link">
+            <span class="material-symbols-outlined">volunteer_activism</span>
+            <span>My Pledges</span>
+          </a>
+          <div class="nav-divider"></div>
+          <a href="../index.html">
+            <span class="material-symbols-outlined">home</span>
+            <span>Home</span>
+          </a>
+          <a id="logout-btn" href="#" class="logout">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main>
+        <div class="page-header">
+          <h1 id="welcome-msg">Welcome back, sayed!</h1>
+          <p>Here's what's happening with your projects today.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <span class="material-symbols-outlined">campaign</span>
+            </div>
+            <p class="stat-label">Campaigns Created</p>
+            <p class="stat-value">0</p>
+            <span class="material-symbols-outlined stat-bg-icon">campaign</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <span class="material-symbols-outlined">payments</span>
+            </div>
+            <p class="stat-label">Amount Pledged</p>
+            <p class="stat-value">$0</p>
+            <span class="material-symbols-outlined stat-bg-icon">payments</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple">
+              <span class="material-symbols-outlined">handshake</span>
+            </div>
+            <p class="stat-label">Campaigns Supported</p>
+            <p class="stat-value">0</p>
+            <span class="material-symbols-outlined stat-bg-icon"
+              >handshake</span
+            >
+          </div>
+        </div>
+
+        <div class="empty-state">
+          <div class="empty-state-content">
+            <button id="create-campaign" class="primary-button">
+              <span class="material-symbols-outlined">add</span>
+              Create A Campaign
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../js/user-dashboard.js"></script>
+  </body>
+</html>

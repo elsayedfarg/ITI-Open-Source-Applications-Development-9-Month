@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23ef4444%22>🪪🔧</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/user-management.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-content">
+          <div>
+            <h1>User Management</h1>
+            <div
+              class="user-count"
+              style="margin-top: 8px; display: inline-block"
+            >
+              0 users
+            </div>
+          </div>
+          <div class="header-actions">
+            <a href="admin-dashboard.html" class="btn btn-dashboard">
+              <span class="material-symbols-outlined btn-icon">arrow_back</span>
+              Return to Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input
+                  type="checkbox"
+                  disabled
+                  class="checkbox"
+                  id="select-all"
+                />
+              </th>
+              <th>User</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="users-container">
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  class="checkbox user-checkbox"
+                  data-user="Marcus Sterling"
+                />
+              </td>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="https://dummyimage.com/100x100/ffffff/ffffff.png&text="
+                    alt="User avatar"
+                    class="user-avatar"
+                  />
+                  <div>
+                    <div class="user-name">sayed mohamed</div>
+                    <div class="user-email">sayed@gmail.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge status-active">
+                  <span class="status-dot dot-active"></span>
+                  Active
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="footer">
+        <p>© 2025 CrowdFund Admin Portal</p>
+      </div>
+    </div>
+
+    <!-- selection bar -->
+    <div class="selection-bar" id="selection-bar">
+      <div class="selected-count">
+        <span class="count-badge">0</span>
+        <span>selected</span>
+      </div>
+      <button class="ban-button" id="ban-button">
+        <span class="material-symbols-outlined">block</span>
+        Ban Selected
+      </button>
+      <button class="close-button" id="close-bar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <script src="../js/user-management.js"></script>
+  </body>
+</html>

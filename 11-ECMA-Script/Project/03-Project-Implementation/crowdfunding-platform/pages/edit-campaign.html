@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Campaign - Crowdfund</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%232563eb%22>🔧📄</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/edit-campaign.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <nav>
+          <a href="./user-dashboard.html">Dashboard</a>
+          <span class="separator material-symbols-outlined">chevron_right</span>
+          <a href="./mycampaigns.html">My Campaigns</a>
+          <span class="separator material-symbols-outlined">chevron_right</span>
+          <span class="current">Edit Campaign</span>
+        </nav>
+        <div class="header-right">
+          <span class="status-badge">User</span>
+          <div
+            class="user-avatar"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCL_EwuLso93BHxOjUImnCavSBx_PPKbXmt-0laeV4NTmH8magsJUNzKz4FxqKqlGaWOCk3qpgpLx3QhpOpaCl7PDvX3TZ-aohoMA7lZHDB0C09IwBWlgi4lxaEHYv2fbf6IVOFin8uuKEDZ2PeFnkBbGD2U_5G6zSH72b8GXzZ5xx3PYhS4lFDHAtZQsbu0sBJOFDBW9NZi8-ofnrE7rU0Pkd55-lnfB7QtQL3Oa8EDHBn1DTfQc_OWuCIH3PY962FT5MhU5S-JBQi&quot;);
+            "
+          ></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="alert-box">
+        <span class="material-symbols-outlined">warning</span>
+        <p>
+          Note: Only deadline and description can be edited after submission to
+          ensure backer protection.
+        </p>
+      </div>
+
+      <div class="grid-layout">
+        <div>
+          <section class="form-section">
+            <h1>Edit: Clean Ocean Initiative 2024</h1>
+
+            <div class="form-group">
+              <label>Campaign Title</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  class="disabled-field"
+                  value="Clean Ocean Initiative 2024"
+                  disabled
+                />
+                <span class="lock-icon material-symbols-outlined">lock</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Category</label>
+                <div class="input-wrapper">
+                  <select class="disabled-field" disabled>
+                    <option>Environment</option>
+                  </select>
+                  <span class="lock-icon material-symbols-outlined">lock</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Funding Goal (USD)</label>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    class="disabled-field"
+                    value="$50,000.00"
+                    disabled
+                  />
+                  <span class="lock-icon material-symbols-outlined"
+                    >lock_person</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Deadline</label>
+              <div class="input-wrapper">
+                <input type="date" value="2024-12-31" />
+                <span class="lock-icon material-symbols-outlined"
+                  >calendar_today</span
+                >
+              </div>
+              <p class="helper-text">
+                Changing the deadline may affect your campaign velocity.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea>
+Our project aims to remove 50 tons of plastic from the Pacific Garbage Patch using innovative net-based filtration systems that protect marine life. Since our initial launch, we've identified three new hotspot locations that require urgent attention. This funding will scale our fleet from 2 to 5 vessels and expand our technical team. We believe that with your help, we can make the oceans safer for future generations.</textarea
+              >
+            </div>
+
+            <div class="form-group">
+              <label>Campaign Image</label>
+
+              <input type="file" id="campaign-image" hidden />
+
+              <div class="image-upload-preview">
+                <img src="" alt="Current Campaign" />
+                <div class="image-overlay">
+                  <button type="button" class="change-image-btn">
+                    <span class="material-symbols-outlined">image_search</span>
+                    Change Image
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <div class="preview-sticky">
+            <div class="preview-container">
+              <div class="preview-header">
+                <span>Live Preview</span>
+                <span class="material-symbols-outlined">visibility</span>
+              </div>
+
+              <img
+                class="preview-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC47NrGqjoLAU1K7bbfmDMKwcNLZamUCrl3Y-z9yclIQhpQJkedJH45xhyvuK7Wvf2C0lYfFIa9SyIZoUShQo2PymRl2M26JFMEveve37s2al4w7oe9QzY2mxZKfyxtPgwwsiikG4eD_VlcpwcUHdLNSqc6AP4QY52AgMS8UqNMTiA7YrMqSKz84tfDHgBUjuYaKO0ENYJOsyEkJVydsneXRG5YJeMDYMw40T574eYmyFVYm_WAee0jkiFEFPY2NLzRLefwy8WZf3_u"
+                alt="Preview"
+              />
+
+              <div class="preview-content">
+                <span class="category-badge">Environment</span>
+
+                <h4 class="preview-title">Clean Ocean Initiative 2024</h4>
+
+                <p class="preview-description">
+                  Our project aims to remove 50 tons of plastic from the Pacific
+                  Garbage Patch using innovative net-based filtration systems...
+                </p>
+
+                <div class="progress-bar">
+                  <div class="progress-fill"></div>
+                </div>
+
+                <div class="preview-stats">
+                  <div class="stat-item">
+                    <p class="stat-label">Raised</p>
+                    <p class="stat-value" id="raised">$22,500</p>
+                  </div>
+                  <div class="stat-item">
+                    <p class="stat-label">Goal</p>
+                    <p class="stat-value" id="goal">$50,000</p>
+                  </div>
+                </div>
+
+                <div class="preview-footer">
+                  <span class="material-symbols-outlined">schedule</span>
+                  <span id="preview-date">Ends in 24 days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <button class="btn btn-cancel">Cancel</button>
+        <div class="footer-actions">
+          <button class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/edit-campaign.js"></script>
+  </body>
+</html>

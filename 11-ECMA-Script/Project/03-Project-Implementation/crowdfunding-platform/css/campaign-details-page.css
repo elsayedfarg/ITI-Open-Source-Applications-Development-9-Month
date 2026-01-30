@@ -1,0 +1,446 @@
+/*============================================= HEADER-SECTION =============================================*/
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  border-bottom: 1px solid #f0f2f4;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  color: var(--primary-blue);
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-dark);
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+/* Main Content */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #616f89;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 24px;
+}
+
+.back-button:hover {
+  color: var(--primary-blue);
+}
+
+/*============================================= MAIN-CONTENT-SECTION =============================================*/
+
+.hero {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  background: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCO8vGJv7nx62Rq7ugaeB3sOns4mODiapUJKnVU-e7fH2gJjdgaFB7u6ewgj3itLahzOA0PApfaNJ8Rby2loNHNvjFx_F4oWl-58OKh_5tT8iHbIp1d4JxBKEtlLcHeFAUhSj73OfT0yT-OEPUq7JzakiCYt45lFKbDZAcOMy25vuhIc8GmZP3Kj4GuimPRbFV7VQcFaO53RheXhpAj0L4VZZx1kHloP8m6ydbw2MODDNQ2WXI3oC8inZGEYwj-rZiiVooQOfTMyD2C")
+    center/cover;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 32px 48px;
+  width: 100%;
+}
+
+.hero-title {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 800px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin-top: 8px;
+  max-width: 600px;
+  font-weight: 500;
+}
+
+/* Main Layout */
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right-column {
+  width: 100%;
+}
+
+/* Creator Info */
+.creator-card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #f0f2f4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.creator-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.creator-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+.creator-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.creator-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+/*============================================= TABS-SECTION =============================================*/
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #dbdfe6;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #616f89;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--primary-dark);
+}
+
+.tab.active {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+}
+
+/*============================================= CAMPAIGN-CONTENT-SECTION =============================================*/
+
+.campaign-content {
+  color: rgba(17, 19, 24, 0.8);
+  line-height: 1.6;
+}
+
+.campaign-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin: 16px 0;
+}
+
+.campaign-content h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin: 16px 0;
+}
+
+.campaign-content p {
+  margin-bottom: 16px;
+}
+
+.campaign-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 24px 0;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBq1px_AISwYdDuuNCgNxjmooaWyUyW-Eu48fr5N5ix03wma6pnjpZd7QFZ0gnWqWudS_zvPzB_WxnsSzr8JYzC0HmMYC4gtGATjK4j-DupdZ7aWF7vz0j-nECuseX6rlCfOBPQ245T7J5NGtjheR0KcpoPUNRfHoQs1uEVfuWTzgRUV8CDUKYOa-54Oxu2sZ4K3HQsoyft1OQV0cNkqpb0RyPUjOBg6t3pq7ohsbPj_jZkmtSQLyl5cTeM1H5hDB19XZsozVBf0zJZ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 16px 0;
+}
+
+.campaign-content li {
+  margin-bottom: 8px;
+}
+
+/*============================================= FUNDING-CARD-SECTION =============================================*/
+
+.funding-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #f0f2f4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  position: sticky;
+  top: 96px;
+}
+
+.funding-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.funding-amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.funding-raised {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary-blue);
+}
+
+.funding-goal {
+  font-size: 14px;
+  color: #616f89;
+  margin-top: 4px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.progress-funded {
+  color: var(--primary-blue);
+}
+
+.progress-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f2f4;
+  border-radius: 9999px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-blue);
+  border-radius: 9999px;
+  width: 83%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #616f89;
+}
+
+.back-button-primary {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--primary-blue),
+    var(--primary-blue-dark)
+  );
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.back-button-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* Material Icons */
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1024px) {
+  .content-layout {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .right-column {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+    padding-right: 16px;
+  }
+
+  .hero-content {
+    padding: 24px;
+  }
+
+  .header-nav {
+    gap: 16px;
+  }
+
+  .main-container {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .creator-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

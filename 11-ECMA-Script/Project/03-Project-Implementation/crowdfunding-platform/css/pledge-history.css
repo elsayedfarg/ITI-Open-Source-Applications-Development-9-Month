@@ -1,0 +1,206 @@
+.blue-text {
+  color: var(--primary-blue);
+}
+
+body {
+  padding: 20px;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pledge-count {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.header-actions {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--primary-blue);
+  color: var(--primary-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: var(--primary-blue-dark);
+}
+
+.btn-dashboard {
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+.btn-dashboard:hover {
+  background-color: var(--primary-blue) !important;
+  color: var(--primary-light) !important;
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+.pledge-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pledge-card {
+  background-color: var(--primary-light);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pledge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.pledge-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.pledge-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.detail-value.amount {
+  color: var(--primary-blue);
+  font-size: 20px;
+}
+
+.pledge-progress {
+  margin-top: 10px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.progress-percent {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.progress-days {
+  color: var(--text-light);
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: var(--border-light);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-blue);
+  border-radius: 3px;
+}
+
+.pledge-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-view {
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-view:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+@media (max-width: 768px) {
+  .pledge-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pledge-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pledge-actions {
+    flex-wrap: wrap;
+  }
+}

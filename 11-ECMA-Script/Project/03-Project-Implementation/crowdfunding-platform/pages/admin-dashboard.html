@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - CrowdFund</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23ef4444%22>🛡️</text></svg>"
+    />
+    <!-- font link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Symbols link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/admin-dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-section">
+          <div class="logo-icon">
+            <span class="material-symbols-outlined">shield_person</span>
+          </div>
+          <h2 class="logo-text">Admin Panel</h2>
+        </div>
+        <div class="header-right">
+          <div class="user-profile">
+            <div class="user-info">
+              <p class="user-name">Super Admin</p>
+              <p class="user-role">Platform Moderator</p>
+            </div>
+            <div class="user-avatar">
+              <span class="material-symbols-outlined">person</span>
+            </div>
+            <!-- <span
+              class="material-symbols-outlined"
+              style="color: var(--text-light)"
+              >expand_more</span
+            > -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside>
+        <nav>
+          <a href="#" class="active">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+          <a href="./user-management.html">
+            <span class="material-symbols-outlined">group</span>
+            <span>Users</span>
+          </a>
+          <a href="./campaign-management.html">
+            <span class="material-symbols-outlined">campaign</span>
+            <span>Campaigns</span>
+          </a>
+          <a href="./pledge-history.html">
+            <span class="material-symbols-outlined">volunteer_activism</span>
+            <span>Pledges</span>
+          </a>
+          <div class="nav-divider"></div>
+          <a href="../index.html">
+            <span class="material-symbols-outlined">home</span>
+            <span>Home</span>
+          </a>
+          <a id="logout-btn" href="#" class="logout-link">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main>
+        <div class="page-header">
+          <h1 class="page-title">Admin Dashboard</h1>
+          <p class="page-subtitle">Platform Overview and Moderation Center</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon blue">
+                <span class="material-symbols-outlined">group</span>
+              </div>
+            </div>
+            <p class="stat-label">Total Users</p>
+            <p class="stat-value">0</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon green">
+                <span class="material-symbols-outlined">rocket_launch</span>
+              </div>
+            </div>
+            <p class="stat-label">Total Campaigns</p>
+            <p class="stat-value">0</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon yellow">
+                <span class="material-symbols-outlined">pending_actions</span>
+              </div>
+            </div>
+            <p class="stat-label">Pending Approvals</p>
+            <p class="stat-value">0</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon purple">
+                <span class="material-symbols-outlined"
+                  >account_balance_wallet</span
+                >
+              </div>
+            </div>
+            <p class="stat-label">Total Revenue</p>
+            <p class="stat-value">$0</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../js/admin-dashboard.js"></script>
+  </body>
+</html>

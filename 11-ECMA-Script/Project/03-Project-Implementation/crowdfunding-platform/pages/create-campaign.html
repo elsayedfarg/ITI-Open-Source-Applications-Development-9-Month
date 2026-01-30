@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Campaign - Crowdfund</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2310b981%22>🌱</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/create-campaign.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <nav>
+          <a href="../index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="./user-dashboard.html">Dashboard</a>
+          <span class="separator">/</span>
+          <span class="current">Create Campaign</span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <h1>Create New Campaign</h1>
+        <p>Fill in the details below to launch your crowdfunding project.</p>
+      </div>
+
+      <div class="grid-layout">
+        <div>
+          <section class="form-section">
+            <h3 class="section-title">
+              <span class="material-symbols-outlined">info</span>
+              Basic Information
+            </h3>
+
+            <div class="form-group">
+              <label>Campaign Title</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  id="campaignTitle"
+                  placeholder="e.g. Eco-Friendly Reusable Water Bottle"
+                  maxlength="100"
+                />
+                <span class="char-counter">0 / 100 characters</span>
+              </div>
+            </div>
+
+            <div class="form-group" style="padding-top: 0.5rem">
+              <label>Funding Goal</label>
+              <div class="input-wrapper">
+                <input
+                  type="number"
+                  id="fundingGoal"
+                  class="currency-input"
+                  placeholder="5,000"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>End Date</label>
+                <input type="date" id="endDate" />
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="category">
+                  <option value="">Select a category</option>
+                  <option value="tech">Technology</option>
+                  <option value="art">Art & Design</option>
+                  <option value="community">Community</option>
+                  <option value="environment">Environment</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3 class="section-title">
+              <span class="material-symbols-outlined">description</span>
+              Story & Media
+            </h3>
+
+            <div class="form-group">
+              <label>Campaign Description</label>
+              <div class="editor-container">
+                <div class="editor-toolbar">
+                  <button>
+                    <span class="material-symbols-outlined">format_bold</span>
+                  </button>
+                  <button>
+                    <span class="material-symbols-outlined">format_italic</span>
+                  </button>
+                  <button>
+                    <span class="material-symbols-outlined"
+                      >format_list_bulleted</span
+                    >
+                  </button>
+                  <button>
+                    <span class="material-symbols-outlined">link</span>
+                  </button>
+                </div>
+                <textarea
+                  id="description"
+                  placeholder="Describe your project, why it's important, and how you will use the funds..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Campaign Hero Image</label>
+              <input
+                type="file"
+                id="campaign-image"
+                name="image"
+                accept="image/png, image/jpeg, image/jpg, image/gif, image/svg+xml"
+                hidden
+              />
+              <div class="upload-area">
+                <div class="upload-icon">
+                  <span class="material-symbols-outlined">cloud_upload</span>
+                </div>
+                <p>Click to upload or drag and drop</p>
+                <p>SVG, PNG, JPG or GIF (max. 800x400px)</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <div class="preview-sticky">
+            <div class="preview-header">
+              <div>
+                <h3>Live Preview</h3>
+                <p>How your project looks to backers</p>
+              </div>
+              <span class="draft-badge">Draft Mode</span>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-image">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC18k-qu0LCJxl5il4nWb3jIk8uL22B6sfBo8Ji1eUl1nRnUoYv-TGTUE0_yUz3nVuretiCx9WmGqVU4KbsbQTXHotPQGfI-CL5avmu21XR-6fgtQVnvhss8a0svMAV4UlP8qkr2jfTdekYwIOISzsI5WfsiriANgE9IdA4x_2oPDSJtRzW372F90479djyIHHqWQccfGPt5fRZl5hWWmclec9ZhmmJf6V5CAEZ-SeS6yJoU-cXWLINKLXKNrRGdmpWDv1PXOOLlmKj"
+                  alt="Campaign visual"
+                />
+              </div>
+              <div class="preview-content">
+                <div class="preview-meta">
+                  <span class="category-badge">Technology</span>
+                </div>
+                <h4 class="preview-title">Untitled Campaign</h4>
+                <p class="preview-description">
+                  Describe your project and let the world know about your
+                  vision. This text will appear on the discovery page...
+                </p>
+
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+
+                <div class="preview-stats">
+                  <div>
+                    <p class="stat-label">Raised</p>
+                    <p class="stat-value">$0</p>
+                  </div>
+                  <div style="text-align: right">
+                    <p class="stat-label">Goal</p>
+                    <p class="stat-value small">$0</p>
+                  </div>
+                </div>
+
+                <div class="preview-author">
+                  <div class="author-avatar">U</div>
+                  <p class="author-name">By User</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <button id="back-to-dashboard" class="btn btn-back">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Back to Dashboard
+        </button>
+        <div class="footer-actions">
+          <button id="submit-for-review-btn" class="btn btn-primary">
+            Submit for Review
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/create-campaign.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back Campaign - CrowdFund</title>
+   <link
+  rel="icon"
+  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2310b981%22>💵</text></svg>"
+/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/back-campaign.css" />
+  </head>
+  <body>
+    <!-- Payment Modal -->
+    <div class="modal-container">
+      <!-- Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">Back this Campaign</h2>
+        <button class="close-button" id="close-button">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+
+      <!-- Campaign Summary -->
+      <div class="campaign-summary">
+        <img class="campaign-image"></img>
+        <div class="campaign-details">
+          <h3 class="campaign-name">Save the Rainforest Campaign</h3>
+        </div>
+      </div>
+
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Pledge Amount Section -->
+        <section class="section">
+          <label class="section-title">Enter your pledge</label>
+          <div class="input-group">
+            <span class="currency">$</span>
+            <input
+              type="number"
+              class="input-field"
+              placeholder="0.00"
+              value="50.00"
+              id="pledge-amount"
+            />
+          </div>
+          <div class="amount-buttons">
+            <button class="amount-button" data-amount="10">$10</button>
+            <button class="amount-button" data-amount="25">$25</button>
+            <button class="amount-button active" data-amount="50">$50</button>
+            <button class="amount-button" data-amount="100">$100</button>
+          </div>
+        </section>
+
+        <!-- Payment Information -->
+        <section class="section">
+          <div class="payment-header">
+            <h3 class="section-title">Payment Information</h3>
+            <div class="payment-icons">
+              <span class="material-icons">credit_card</span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Card Number"
+              id="card-number"
+            />
+          </div>
+
+          <div class="payment-grid">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="MM / YY"
+              id="expiry-date"
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="CVV"
+              id="cvv"
+            />
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Cardholder Name"
+              id="cardholder-name"
+            />
+          </div>
+        </section>
+
+        <!-- Summary Box -->
+        <section class="section">
+          <div class="summary-box">
+            <div class="summary-total">
+              <span class="total-label">Total</span>
+              <span class="total-value" id="total-summary">$50.00</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button class="footer-button cancel-button" id="cancel-button">
+          Cancel
+        </button>
+        <button class="footer-button confirm-button" id="confirm-button">
+          Confirm Pledge
+        </button>
+      </div>
+    </div>
+    <script src="../js/back-campaign.js"></script>
+  </body>
+</html>

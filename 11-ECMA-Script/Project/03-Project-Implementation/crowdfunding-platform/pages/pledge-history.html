@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Pledge History</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%232563eb%22>🕐</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/pledge-history.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <h1>All Pledges</h1>
+          <div class="pledge-count">Total pledged: $0</div>
+        </div>
+        <div class="header-actions">
+          <a href="#" id="back-to-dashboard" class="btn btn-dashboard">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Return To Dashboard
+          </a>
+        </div>
+      </div>
+
+      <div class="pledge-cards">
+        <!-- Pledge Card 1: Active -->
+        <div class="pledge-card">
+          <div class="pledge-header">
+            <div>
+              <h2 class="pledge-title">Eco-Friendly Modular Backpack</h2>
+              <p class="pledge-creator">
+                by <span style="color: var(--primary-blue)">Sayed mohamed</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="pledge-details">
+            <div class="detail-group">
+              <span class="detail-label">Amount Pledged</span>
+              <span class="detail-value amount">$185.00</span>
+            </div>
+          </div>
+
+          <div class="pledge-progress">
+            <div class="progress-info">
+              <span class="progress-percent">85% funded</span>
+              <span class="progress-days">12 days left</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="pledge-actions">
+            <button class="btn btn-view">View Campaign</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/pledge-history.js"></script>
+  </body>
+</html>

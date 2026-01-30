@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaign Management</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%232563eb%22>⚙️</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/general-style.css" />
+    <link rel="stylesheet" href="../css/campaign-management.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-content">
+          <div>
+            <h1>Campaign Management</h1>
+            <div class="campaign-count">0 campaigns</div>
+          </div>
+          <div class="header-actions">
+            <a href="admin-dashboard.html" class="btn btn-dashboard">
+              <span class="material-symbols-outlined btn-icon">arrow_back</span>
+              Return to Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  disabled
+                  id="select-all"
+                />
+              </th>
+              <th>Campaign</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="campaigns-container"></tbody>
+        </table>
+      </div>
+
+      <div class="footer">
+        <p>© 2025 CrowdFund Admin Portal</p>
+      </div>
+    </div>
+
+    <!-- Rejection Modal -->
+    <div class="modal" id="reject-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Reject Campaign</h3>
+          <button class="modal-close" id="close-reject-modal">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text" id="reject-modal-text">
+            Are you sure you want to reject the selected campaign? This action
+            cannot be undone.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-cancel" id="cancel-reject">Cancel</button>
+          <button class="btn btn-danger" id="confirm-reject">
+            Reject Campaign
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deletion Modal -->
+    <div class="modal" id="delete-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Delete Campaign</h3>
+          <button class="modal-close" id="close-delete-modal">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text" id="delete-modal-text">
+            Are you sure you want to delete the selected campaign? This action
+            cannot be undone and all campaign data will be permanently removed.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-cancel" id="cancel-delete">Cancel</button>
+          <button class="btn btn-danger" id="confirm-delete">
+            Delete Campaign
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/campaign-management.js"></script>
+  </body>
+</html>
