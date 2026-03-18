@@ -1,0 +1,99 @@
+{
+  "info": {
+    "_postman_id": "ea7f4599-ce26-4988-8d09-27acfded39e4",
+    "name": "NodeJS Course Code",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "Create payment session",
+          "id": "9d9517eb-76db-466b-bb2b-9b20fc6f9fbd",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{secret_key}}"
+              },
+              {
+                "key": "api-key",
+                "value": "{{api_key}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{api_key}}",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n//   \"expireAt\": \"2025-01-28T17:27:32.359Z\",\n//   \"maxFailureAttempts\": 3,\n  \"paymentType\": \"credit\",\n  \"amount\": \"1.00\",\n  \"currency\": \"EGP\",\n  \"order\": \"8f64saf6sa43\",\n  \"merchantRedirect\": \"https://example.com/redirect\",\n  \"display\": \"en\",\n//   \"type\": \"one-time\",\n  \"allowedMethods\": \"card,wallet\",\n  \"redirectMethod\": null,\n  \"iframeBackgroundColor\": \"#FFFFFF\",\n//   \"metaData\": {\n//       \"customKey\": \"customValue\",\n//       \"displayNotes\": {\"key\": \"value\"}\n//   },\n  \"merchantId\": \"MID-42823-787\",\n  \"failureRedirect\": false,\n  \"brandColor\": \"#FF5733\",\n  \"defaultMethod\": \"card\",\n  \"description\": \"Payment for order ORD123456\",\n  \"manualCapture\": false,\n  \"customer\": {\n      \"email\": \"john@gmail.com\",\n      \"reference\": \"894321\"\n  },\n  \"saveCard\": \"optional\",\n//   \"retrieveSavedCard\": true,\n  \"interactionSource\": \"ECOMMERCE\",\n  \"enable3DS\": true,\n  \"serverWebhook\": \"https://your_webhook_url\",\n  \"notes\": \"Special handling required\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://test-api.kashier.io/v3/payment/sessions",
+              "protocol": "https",
+              "host": [
+                "test-api",
+                "kashier",
+                "io"
+              ],
+              "path": [
+                "v3",
+                "payment",
+                "sessions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Donate",
+          "id": "c8c5532b-05cd-4eeb-8fa9-4826079cae7b",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"amount\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://homelike-kaidence-modishly.ngrok-free.dev/donation",
+              "protocol": "https",
+              "host": [
+                "homelike-kaidence-modishly",
+                "ngrok-free",
+                "dev"
+              ],
+              "path": [
+                "donation"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "77eb0e41-067e-46b7-b600-48b591475243"
+    }
+  ]
+}

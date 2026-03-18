@@ -1,0 +1,184 @@
+{
+  "info": {
+    "_postman_id": "5e7f5700-d953-444f-bcb6-04d6dbd1c609",
+    "name": "NestJS Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Tasks",
+      "id": "d48ad942-258c-47e2-8ba6-409bcf87ae76",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create New Task",
+      "id": "37caf83d-b982-43b4-9021-2bc83bd989ee",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "title",
+              "value": "clean my room",
+              "type": "text",
+              "uuid": "d931bbee-01af-4d99-8361-e59c72f1ed27"
+            },
+            {
+              "key": "description",
+              "value": "you have to clean the room",
+              "type": "text",
+              "uuid": "c4340106-8870-4967-ae3d-8508a489f1bb"
+            },
+            {
+              "key": "test",
+              "value": "qwq",
+              "type": "text",
+              "uuid": "ce21ec4b-ff05-406d-9ae8-45a9de188890"
+            }
+          ],
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Task By Id",
+      "id": "84d6d80c-cb88-4743-91f2-577e7e5512e5",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks/86f7074c-5a76-4cfc-9fd9-554ffb2d58ee",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks",
+            "86f7074c-5a76-4cfc-9fd9-554ffb2d58ee"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Task By Id",
+      "id": "87d69ecf-cbb9-4590-88cd-a0cbe9ef7a10",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks/365661fd-5a95-4cc1-a4f2-f55b2245cd6c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks",
+            "365661fd-5a95-4cc1-a4f2-f55b2245cd6c"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Status By Id",
+      "id": "022a62fd-8b89-4811-a7f3-be60bcd49e6c",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "status",
+              "value": "IN_PROGRESS",
+              "type": "text",
+              "uuid": "42987908-9b59-40df-bbaf-10a45c752af8"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks/c50e1f9c-430b-4fb0-8dc7-9cb81e6dbc3e/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks",
+            "c50e1f9c-430b-4fb0-8dc7-9cb81e6dbc3e",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks With Filters",
+      "id": "e2e83192-baa9-43cc-b9bb-cd7f5a1b9a27",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks?status=OPEN&search=you",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "OPEN",
+              "uuid": "1c730975-d666-4837-bfce-d647c5d61c55"
+            },
+            {
+              "key": "search",
+              "value": "you",
+              "uuid": "b60b3d1c-9f47-4ac9-9f66-b288dbe99988"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

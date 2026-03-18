@@ -1,0 +1,659 @@
+{
+  "info": {
+    "_postman_id": "cbb56a2f-3b5a-46b2-98bd-757c316b7da1",
+    "name": "CrowdFunding-Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GetAllUsers",
+      "id": "e73972bd-6f31-46db-8915-afd91e0ba424",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RegisterNewUser",
+      "id": "216b12e1-dde7-4bc9-8bb3-4e42e0fc9fab",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@gmail.com\",\n  \"password\": \"ahmed12345\",\n  \"name\": \"New User\",\n  \"role\": \"admin\",\n  \"isActive\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/register",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LoginUser",
+      "id": "797f182e-cdfb-47c4-bb6e-5eb15304dcb8",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"elsayedfarg792003@gmail.com\",\n  \"password\": \"sayed123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LoginAdmin",
+      "id": "fe29a7c1-29ca-48bf-b88b-b849b3d06bbb",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"ahmed123@gmail.com\",\n    \"password\":\"ahmed12345\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllUsers",
+      "id": "dad332a7-485a-4674-a42f-680512061eae",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetUserById",
+      "id": "307e8355-847d-4265-9dcd-108f034d7396",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/users/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateCampaign",
+      "id": "cbca3fb9-9efb-4286-83b3-540565262370",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Art Campaign\",\n  \"description\": \"Support my art\",\n  \"goal\": 1000,\n  \"currentAmount\": 0,\n  \"deadline\": \"2026-02-01\",\n  \"category\": \"art\",\n  \"image\": \"BASE64_STRING_HERE\",\n  \"creatorId\": 1,\n  \"status\":\"pending\"\n}\n"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/campaigns",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "campaigns"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllPledges",
+      "id": "ec3faeae-a30f-4a15-86f2-da21567ac9cb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "this is the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is the desc of the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "goal",
+              "value": "4000",
+              "type": "text"
+            },
+            {
+              "key": "currentAmount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "deadline",
+              "value": "2026-12-31",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/home/sayedmohamed/Downloads/test.jpg"
+            },
+            {
+              "key": "creatorId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "isApproved",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pledges",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pledges"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetCampaignByCreatorId",
+      "id": "5a056538-de0b-4e1b-976e-bbc0ab5507ba",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "this is the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is the desc of the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "goal",
+              "value": "4000",
+              "type": "text"
+            },
+            {
+              "key": "currentAmount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "deadline",
+              "value": "2026-12-31",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/home/sayedmohamed/Downloads/test.jpg"
+            },
+            {
+              "key": "creatorId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "isApproved",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/campaigns?creatorId=1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "campaigns"
+          ],
+          "query": [
+            {
+              "key": "creatorId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteCampaignById",
+      "id": "23976acd-093a-4f49-aea3-bce4d9a25d94",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "this is the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is the desc of the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "goal",
+              "value": "4000",
+              "type": "text"
+            },
+            {
+              "key": "currentAmount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "deadline",
+              "value": "2026-12-31",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/home/sayedmohamed/Downloads/test.jpg"
+            },
+            {
+              "key": "creatorId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "isApproved",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/campaigns/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "campaigns",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetCampaignById",
+      "id": "a51e2974-b9ae-4d07-a4e9-764255c9e9d0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "this is the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is the desc of the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "goal",
+              "value": "4000",
+              "type": "text"
+            },
+            {
+              "key": "currentAmount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "deadline",
+              "value": "2026-12-31",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/home/sayedmohamed/Downloads/test.jpg"
+            },
+            {
+              "key": "creatorId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "isApproved",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/campaigns/12",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "campaigns",
+            "12"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RejectCampaign",
+      "id": "8449a14b-a13f-48b0-b272-741de76278d4",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "this is the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is the desc of the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "goal",
+              "value": "4000",
+              "type": "text"
+            },
+            {
+              "key": "currentAmount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "deadline",
+              "value": "2026-12-31",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/home/sayedmohamed/Downloads/test.jpg"
+            },
+            {
+              "key": "creatorId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "isApproved",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/campaigns/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "campaigns",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "make pledge",
+      "id": "715f0893-d952-4a35-9e44-cde73bc8b2fa",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"amount\":200,\n    \"campaignId\":1,\n    \"userId\":2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pledges",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pledges"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllCampaigns",
+      "id": "3c25bfec-9368-4971-9627-c14aa98dd68c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "this is the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is the desc of the first campaign",
+              "type": "text"
+            },
+            {
+              "key": "goal",
+              "value": "4000",
+              "type": "text"
+            },
+            {
+              "key": "currentAmount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "deadline",
+              "value": "2026-12-31",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "tech",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/home/sayedmohamed/Downloads/test.jpg"
+            },
+            {
+              "key": "creatorId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "isApproved",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/campaigns",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "campaigns"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

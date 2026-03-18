@@ -1,0 +1,710 @@
+{
+  "info": {
+    "_postman_id": "69bd19c2-f8a3-4327-a0f4-bafd70b333e3",
+    "name": "Jonas-NodeJS-Course",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tours",
+      "item": [
+        {
+          "name": "Get All Tours",
+          "id": "038bb76d-9697-4ee8-97f6-c567d19d62ae",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours?duration[gte]=5&difficulty=easy&page=1&price[lte]=500",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours"
+              ],
+              "query": [
+                {
+                  "key": "duration[gte]",
+                  "value": "5"
+                },
+                {
+                  "key": "difficulty",
+                  "value": "easy"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "price[lte]",
+                  "value": "500"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Tour",
+          "id": "6b3f2d6c-890a-4206-8175-a2b2a5a79127",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"elsayedmohamed\",\n    \"duration\": 5,\n    \"maxGroupSize\": 25,\n    \"difficulty\": \"easy\",\n    \"price\": 397,\n    \"priceDiscount\":100,\n    \"summary\": \"Breathtaking hike through the Canadian Banff National Park\",\n    \"imageCover\": \"tour-1-cover.jpg\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tour By Id",
+          "id": "77231eaf-b9f0-4c99-b1eb-70057a0fff37",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test tour\",\n    \"duration\":10,\n    \"difficulty\":\"easy\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours/retr",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours",
+                "retr"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Tour",
+          "id": "e248473c-77aa-4e57-af30-942ace7268d8",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test tour\",\n    \"duration\":10,\n    \"difficulty\":\"easy\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours/6974af857fc1f729f8b04a5f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours",
+                "6974af857fc1f729f8b04a5f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Tour",
+          "id": "d9403cf1-5262-44fa-bcc0-7f3ad7723f48",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test tour\",\n    \"duration\":10,\n    \"difficulty\":\"easy\"\n}"
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/tours/6974ac5a98c1cb1f4354c780",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "tours",
+                "6974ac5a98c1cb1f4354c780"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sorted By Price Tours",
+          "id": "ecf6cf6f-8e77-4d59-9109-1b9119e24524",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"The Forest Hiker\",\n    \"duration\": 5,\n    \"maxGroupSize\": 25,\n    \"difficulty\": \"easy\",\n    \"ratingsAverage\": 4.7,\n    \"ratingsQuantity\": 37,\n    \"price\": 397,\n    \"summary\": \"Breathtaking hike through the Canadian Banff National Park\",\n    \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\n    \"imageCover\": \"tour-1-cover.jpg\",\n    \"images\": [\"tour-1-1.jpg\", \"tour-1-2.jpg\", \"tour-1-3.jpg\"],\n    \"startDates\": [\"2021-04-25,10:00\", \"2021-07-20,10:00\", \"2021-10-05,10:00\"]\n  }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours?sort=-price,ratingsAverage",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "-price,ratingsAverage"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Limited FIelds",
+          "id": "02aabb88-ae60-4128-81c9-69904f5a6637",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"The Forest Hiker\",\n    \"duration\": 5,\n    \"maxGroupSize\": 25,\n    \"difficulty\": \"easy\",\n    \"ratingsAverage\": 4.7,\n    \"ratingsQuantity\": 37,\n    \"price\": 397,\n    \"summary\": \"Breathtaking hike through the Canadian Banff National Park\",\n    \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\n    \"imageCover\": \"tour-1-cover.jpg\",\n    \"images\": [\"tour-1-1.jpg\", \"tour-1-2.jpg\", \"tour-1-3.jpg\"],\n    \"startDates\": [\"2021-04-25,10:00\", \"2021-07-20,10:00\", \"2021-10-05,10:00\"]\n  }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours?fields=name,duration,difficulty,price",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "name,duration,difficulty,price"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagination",
+          "id": "1c87f988-9f68-40b9-9bcd-870cd8d61a52",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"The Forest Hiker\",\n    \"duration\": 5,\n    \"maxGroupSize\": 25,\n    \"difficulty\": \"easy\",\n    \"ratingsAverage\": 4.7,\n    \"ratingsQuantity\": 37,\n    \"price\": 397,\n    \"summary\": \"Breathtaking hike through the Canadian Banff National Park\",\n    \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\n    \"imageCover\": \"tour-1-cover.jpg\",\n    \"images\": [\"tour-1-1.jpg\", \"tour-1-2.jpg\", \"tour-1-3.jpg\"],\n    \"startDates\": [\"2021-04-25,10:00\", \"2021-07-20,10:00\", \"2021-10-05,10:00\"]\n  }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours?page=4&limit=3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "4"
+                },
+                {
+                  "key": "limit",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Aliasing (Top 5 Tours)",
+          "id": "9bce7252-a5b2-45f0-9534-3a80a7137173",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours/top-5-cheap",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours",
+                "top-5-cheap"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tour Stats",
+          "id": "89e530d5-8a2c-4743-a6ae-7c27c90ba948",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/tours/tour-stats",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "tours",
+                "tour-stats"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Accessing unhandled Routes",
+          "id": "bcf3053a-22f6-4dc5-8f3b-dfcac3c22bea",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tours",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tours"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "84e83cdc-6f51-444f-90f8-ff9fa81af0f3"
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get All Users",
+          "id": "adc762c7-77b0-44bb-8273-1bca3ec59b3e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}api/v1/users",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Signup",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b4074b94-c72f-4175-90e6-700b11ca6d24",
+                "exec": [
+                  "// Parse response JSON",
+                  "const jsonData = pm.response.json();",
+                  "",
+                  "// Save JWT in environment variable",
+                  "pm.environment.set(\"jwt\", jsonData.token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "7c2430b4-e197-45a3-952a-a79973dbd706",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"ahmed\",\n    \"email\": \"user1@gmail.com\",\n    \"password\": \"12345678\",\n    \"passwordConfirm\": \"12345678\",\n    \"role\":\"user\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/users/signup",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "93fd9076-3d22-43bd-8e64-22f1454e029e",
+                "exec": [
+                  "// Parse response JSON",
+                  "const jsonData = pm.response.json();",
+                  "",
+                  "// Save JWT in environment variable",
+                  "pm.environment.set(\"jwt\", jsonData.token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "a588df2b-3cf5-47ad-84ce-d29f4ca23d7c",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"ahmed@gmail.com\",\n    \"password\":\"newPass123456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/users/login",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Tours",
+          "id": "7958ae7d-10f6-494d-98ec-000fd365bcf7",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}api/v1/tours",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "tours"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "id": "68cca2b5-d536-48fa-b198-e48dbef8e328",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"elsayedfarg792003@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/users/forgotPassword",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "forgotPassword"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0f9d1db8-3964-41d8-8721-9e02d62b56c2",
+                "exec": [
+                  "// Parse response JSON",
+                  "const jsonData = pm.response.json();",
+                  "",
+                  "// Save JWT in environment variable",
+                  "pm.environment.set(\"jwt\", jsonData.token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "f4d7ebbf-e2b7-4d0a-8ac1-d9bc228b4852",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"password\":\"newpass123\",\n    \"passwordConfirm\":\"newpass123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/users/resetPassword/9658f9402115ddb032c104e8f1a447afe30e5332fa761b8cdbb8cf9bd88baad5",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "resetPassword",
+                "9658f9402115ddb032c104e8f1a447afe30e5332fa761b8cdbb8cf9bd88baad5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Password",
+          "id": "3d76bdbf-0252-4709-820b-38a8e3b20024",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"passwordCurrent\":\"12345678\",\n    \"password\":\"newPass123456\",\n    \"passwordConfirm\":\"newPass123456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/users/updatePassword",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "updatePassword"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Me",
+          "id": "e2ca981c-910c-40f5-80e5-6fe1ffae455e",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"sayed\",\n    \"role\":\"user\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}api/v1/users/updateMe",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "updateMe"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Me",
+          "id": "d7b2544f-2f9c-4bae-b49d-728097050e80",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}api/v1/users/deleteMe",
+              "host": [
+                "{{URL}}api"
+              ],
+              "path": [
+                "v1",
+                "users",
+                "deleteMe"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "75c25083-ba47-459b-9c20-a51cb1a16362"
+    }
+  ]
+}

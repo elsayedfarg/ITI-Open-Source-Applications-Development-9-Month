@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alice Johnson",
+    "address": "123 Main St, New York",
+    "grade": "A",
+    "courses": ["Math", "Physics", "Computer Science"]
+  },
+  {
+    "name": "Brian Smith",
+    "address": "45 Oak Avenue, Chicago",
+    "grade": "B",
+    "courses": ["History", "English"]
+  },
+  {
+    "name": "Catherine Lee",
+    "address": "78 Pine Road, San Francisco",
+    "grade": "A+",
+    "courses": ["Biology", "Chemistry"]
+  },
+  {
+    "name": "sayed mohamed",
+    "address": "123 Main St, New York",
+    "grade": "A",
+    "courses": ["Math", "Physics", "Computer Science"]
+  }
+]

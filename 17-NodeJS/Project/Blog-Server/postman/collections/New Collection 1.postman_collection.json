@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "3cc72e7b-9da5-4989-a32f-d2f8f70d1c2c",
+    "name": "NestJS Bookmark Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Bookmarks",
+      "id": "a4ed4e32-fff8-4cf3-8c23-4cf22d53ba55",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/bookmarks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "bookmarks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Bookmark",
+      "id": "dfa329e7-b547-4aef-825e-7eaadbb84deb",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://2.com\",\n  \"title\": \"2 Bookmark\",\n  \"description\": \"This is a test bookmark\",\n  \"tags\": [\"test\", \"dsa\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookmarks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "bookmarks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Bookmark By Id",
+      "id": "631aa63f-4a23-4344-8c2b-8e8ae26f153c",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/bookmarks/69a528557d591deb1264e5df",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "bookmarks",
+            "69a528557d591deb1264e5df"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Bookmark By Id",
+      "id": "421f5fcd-a860-445c-a9b4-489159237849",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/bookmarks/69a528557d591deb1264e5df",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "bookmarks",
+            "69a528557d591deb1264e5df"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Bookmark By Id",
+      "id": "5dbd2011-547a-466b-afd6-9ac71111c7ff",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"url\":\"https://2.com\",\n    \"title\":\"updated title\",\n    \"description\":\"test\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookmarks/69a52eee5862c9c492d84ecc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "bookmarks",
+            "69a52eee5862c9c492d84ecc"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
