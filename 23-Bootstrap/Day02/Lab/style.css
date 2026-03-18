@@ -1,0 +1,46 @@
+body {
+  background-color: #000;
+}
+
+.custom-navbar {
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 12px 12px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navbar-toggler {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar-links i {
+  font-size: 18px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.navbar-links a:last-child {
+  margin-right: 10px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+  .hero img {
+    height: 40vh;
+  }
+}
