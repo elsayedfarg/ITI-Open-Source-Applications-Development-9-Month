@@ -1,0 +1,140 @@
+{
+    "location": "241 el Haram St., Giza",
+    "description":"General Library",
+    "librarian":"Mohamed Ahmed",
+    "books":[
+        {
+            "ISBN":9781847946249,
+            "title":"The Power of Habit",
+            "Author":"Charlis Duhigg",
+            "preface":"",
+            "parts":[
+                {
+                    "Title":"The Habits of Individuals",
+                    "chapters":[
+                        {
+                            "title":"THE HABIT LOOP",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        },
+                        {
+                            "title":"THE CRAVING BRAIN",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Title":"The Habits of Successful Organizations",
+                    "chapters":[
+                        {
+                            "title":"KEYSTONE HABITS, OR THE BALLAD OF PAUL O’NEILL",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        },
+                        {
+                            "title":"STARBUCKS AND THE HA BIT OF SUCCESS",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ISBN":9781484250785,
+            "title":"Begining Jakarta EE",
+            "Author":"Peter Spath",
+            "preface":"",
+            "parts":[
+                {
+                    "Title":"Java Development,Enterprise Needs",
+                    "chapters":[
+                        {
+                            "title":"Standardized Specifications",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        },
+                         {
+                            "title":"Multi-tiered Applications",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Title":"Getting a Jakarta EE Server to Work",
+                    "chapters":[
+                        {
+                            "title":"Getting and Installing Glassfish",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        },
+                         {
+                            "title":"Glassfish Shell Administration",
+                            "summary":"",
+                            "sections":[
+                                {
+                                },
+                                {
+                                    
+                                }
+                         
+                            ]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

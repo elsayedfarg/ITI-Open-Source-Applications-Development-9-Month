@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <location>241 el Haram St., Giza</location>
+    <description>General Library</description>
+    <librarian>Mohamed Ahmed</librarian>
+    <book ISBN='9781847946249'>
+        <title>The Power of Habit</title>
+        <Author>Charlis Duhigg</Author>
+        <preface>
+        <![CDATA[
+          She was the scientists’ favorite participant.
+           Lisa Allen, according to her file, was thirty-four years old, had started smoking and drinking when she was sixteen, and had struggled with obesity for most
+           of her life. At one point, in her mid-twenties, collection agencies were hounding her to recover $10,000 in debts. An old résumé listed her longest job as
+           lasting less than a year.
+           The woman in front of the researchers today, however, was lean and vibrant, with the toned legs of a runner. She looked a decade younger than the
+           photos in her chart and like she could out-exercise anyone in the room. 
+           According to the most recent report in her file, Lisa had no outstanding debts,didn’t drink, and was in her thirty-ninth month at a graphic design firm.
+        ]]>
+        </preface>
+        <part>
+            <title>The Habits of Individuals</title>
+            <chapter>
+                <title>THE HABIT LOOP</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+            <chapter>
+                <title>THE CRAVING BRAIN</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+        </part>
+        <part>
+            <title>The Habits of Successful Organizations</title>
+            <chapter>
+                <title>KEYSTONE HABITS, OR THE BALLAD OF PAUL O’NEILL</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+            <chapter>
+                <title>STARBUCKS AND THE HA BIT OF SUCCESS</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+        </part>
+    </book>
+    <book ISBN='9781484250785'>
+        <title>Begining Jakarta EE</title>
+        <Author>Peter Spath</Author>
+        <preface><![CDATA[
+        Software development is about telling computers what has to happen if some kind of input arrives. 
+        This is the most salient quality of computer programs, from the very beginning of computer history up to today. 
+        Other and more detailed qualities emerged as computer programs more and more showed their ability to handle everyday tasks. 
+        While the practical applicability of computer programs increased, two early discriminations for different kinds of computer programs showed up: 
+        the first is the place where data live, and the second is the place where programs get stored and run.
+        ]]></preface>
+        <part>
+            <title>Java Development,Enterprise Needs</title>
+            <chapter>
+                <title>Standardized Specifications</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+            <chapter>
+                <title>Multi-tiered Applications</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+        </part>
+        <part>
+            <title>Getting a Jakarta EE Server to Work</title>
+            <chapter>
+                <title>Getting and Installing Glassfish</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+            <chapter>
+                <title>Glassfish Shell Administration</title>
+                <summary></summary>
+                <section></section>
+                <section></section>
+            </chapter>
+        </part>
+    </book>
+   
+    
+</library>
+
