@@ -1,0 +1,43 @@
+{% extends 'base.html' %}{% load static %} {% block body %}
+<div style="max-width: 400px; margin: auto; text-align: center">
+  <h2 style="margin: 10px 0">{{ product.name }}</h2>
+  <img
+    src="{{ product.image_url }}"
+    alt="{{ product.name }}"
+    style="width: 300px; height: 300px; object-fit: cover"
+    class="product-img"
+  />
+  <table>
+    <tbody>
+      <tr>
+        <td class="id">ID</td>
+        <td>{{ product.id }}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{ product.name }}</td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td class="price">{{ product.price }} $</td>
+      </tr>
+
+      <tr>
+        <td>Cat</td>
+        <td class="price">{{ product.category }}</td>
+        <td class="price">
+          <img
+            width="50px"
+            height="50px"
+            src="{{ product.category.logo.url }}"
+            alt=""
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="{% url 'products.index' %}" style="margin: 20px 0" class="btn-show"
+    >Back</a
+  >
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% load static %} {% block head_extra %}
+<link rel="stylesheet" href="{% static 'css/categories_index.css' %}" />
+{% endblock %} {% block body %}
+
+<div class="cat-page">
+  <div class="cat-header">
+    <div class="cat-header-meta">
+      <span class="badge-dot"></span>
+      <span class="cat-count">{{ categories|length }} Units Classified</span>
+    </div>
+    <h1 class="cat-title">Categories</h1>
+    <p class="cat-subtitle">Browse all available product classifications.</p>
+  </div>
+
+  <div class="cat-grid">
+    {% for category in categories %}
+    <a href="{% url 'categories.show' category.id %}" class="cat-card">
+      <div class="cat-card-img-wrap">
+        {% if category.logo %}
+        <img
+          src="{{ category.logo_url }}"
+          alt="{{ category.name }}"
+          class="cat-card-img"
+        />
+        {% else %}
+        <div class="cat-card-placeholder">
+          <span>NO<br />IMG</span>
+        </div>
+        {% endif %}
+        <div class="cat-card-overlay"></div>
+      </div>
+      <div class="cat-card-body">
+        <span class="cat-card-index"
+          >{{ forloop.counter|stringformat:"02d" }}</span
+        >
+        <h2 class="cat-card-name">{{ category.name }}</h2>
+        <span class="cat-card-arrow">&#8599;</span>
+      </div>
+    </a>
+    {% empty %}
+    <div class="cat-empty">
+      <span>No categories found.</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

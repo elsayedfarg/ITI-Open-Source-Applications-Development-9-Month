@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<h1
+  style="
+    font-family: var(--font-display);
+    color: var(--lime);
+    text-align: center;
+  "
+>
+  Contact Us
+</h1>
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+{% endblock %} {% endblock %} {% block body %}
+<div style="max-width: 600px; margin: auto">
+  <form method="post">
+    {% csrf_token %}
+
+    <label>Name</label>
+    <input type="text" name="name" />
+
+    <label>Email</label>
+    <input type="email" name="email" />
+
+    <label>Message</label>
+    <textarea name="message"></textarea>
+
+    <button class="btn-show" type="submit">Send Message</button>
+  </form>
+</div>
+{% endblock %}

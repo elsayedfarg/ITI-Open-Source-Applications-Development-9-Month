@@ -1,0 +1,26 @@
+{% extends 'base.html' %}{% load static %} {% block body %}
+<div style="max-width: 400px; margin: auto; text-align: center">
+  <h2>{{ product.name }}</h2>
+  <img
+    src="{% static product.image %}"
+    alt="{{ product.name }}"
+    class="product-img"
+  />
+  <table>
+    <tbody>
+      <tr>
+        <td class="id">ID</td>
+        <td>{{ product.id }}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{ product.name }}</td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td class="price">{{ product.price }} $</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

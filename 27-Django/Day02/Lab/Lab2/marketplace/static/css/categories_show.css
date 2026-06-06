@@ -1,0 +1,350 @@
+/* ── categories_show.css ── NOVA design system ── */
+
+/* ── Page shell ── */
+.show-page {
+  padding: 2.5rem 2rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Back link ── */
+.back-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: #c8f04a;
+}
+.show-back {
+  margin-bottom: 2.5rem;
+}
+
+/* ── Hero layout ── */
+.show-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ── Info side ── */
+.show-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.2rem;
+}
+.show-meta-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666;
+}
+.show-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: #f0ede8;
+  margin: 0 0 2rem;
+  word-break: break-word;
+}
+
+/* Date row */
+.show-dates {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.show-date-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.show-date-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #444;
+}
+.show-date-val {
+  font-family: "Syne", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #aaa;
+  letter-spacing: 0.03em;
+}
+.show-date-divider {
+  width: 1px;
+  height: 2rem;
+  background: #2a2a2a;
+  flex-shrink: 0;
+}
+
+/* ── Image side ── */
+.show-hero-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid #1e1e1e;
+  background: #0f0f0f;
+}
+.show-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.show-hero-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+.show-hero-placeholder span {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.15em;
+  color: #222;
+}
+
+/* ── Divider ── */
+.show-divider {
+  height: 1px;
+  background: #1a1a1a;
+  margin: 3rem 0 2.5rem;
+}
+
+/* ── Footer row ── */
+.show-footer-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* ════════════════════════════════
+   Products section
+   ════════════════════════════════ */
+.products-section {
+  margin-bottom: 0;
+}
+
+.products-section-header {
+  margin-bottom: 1.75rem;
+}
+
+.products-section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.products-section-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  color: #f0ede8;
+  margin: 0;
+}
+
+.products-count {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c8f04a;
+  background: rgba(200, 240, 74, 0.08);
+  border: 1px solid rgba(200, 240, 74, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+
+.products-section-sub {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  color: #555;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── Table ── */
+.products-table {
+  border: 1px solid #1e1e1e;
+  overflow: hidden;
+}
+
+/* Head row */
+.products-table-head {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 6rem 2rem;
+  align-items: center;
+  padding: 0.6rem 1.1rem;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.products-table-head span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+}
+
+/* Data rows */
+.products-table-row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 6rem 2rem;
+  align-items: center;
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid #161616;
+  text-decoration: none;
+  transition: background 0.18s ease;
+  cursor: pointer;
+}
+
+.products-table-row:last-child {
+  border-bottom: none;
+}
+
+.products-table-row:hover {
+  background: #111;
+}
+
+.products-table-row:hover .col-arrow {
+  color: #c8f04a;
+  transform: translate(2px, -2px);
+}
+
+/* Columns */
+.col-idx {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  color: #333;
+  letter-spacing: 0.08em;
+}
+
+.col-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.product-thumb {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #1e1e1e;
+}
+
+.product-thumb-placeholder {
+  width: 36px;
+  height: 36px;
+  background: #161616;
+  border: 1px solid #1e1e1e;
+  flex-shrink: 0;
+}
+
+.product-row-name {
+  font-family: "Syne", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #c8c4bc;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-price {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 0.04em;
+}
+
+.col-arrow {
+  font-size: 1rem;
+  color: #2e2e2e;
+  transition:
+    color 0.18s,
+    transform 0.18s;
+  justify-self: end;
+}
+
+/* ── Empty state ── */
+.products-empty {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2.5rem 1.1rem;
+  border: 1px solid #1a1a1a;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  color: #444;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badge-dot--dim {
+  background: #333 !important;
+}
+
+/* ── badge-dot ── */
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c8f04a;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .show-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .show-hero-img-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .products-table-head,
+  .products-table-row {
+    grid-template-columns: 2rem 1fr 5rem 1.5rem;
+    padding: 0.65rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .show-page {
+    padding: 1.5rem 1.2rem 4rem;
+  }
+  .products-table-head .col-price,
+  .products-table-row .col-price {
+    display: none;
+  }
+  .products-table-head,
+  .products-table-row {
+    grid-template-columns: 2rem 1fr 1.5rem;
+  }
+}

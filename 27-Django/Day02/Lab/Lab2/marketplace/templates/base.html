@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar & Footer — NOVA</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% block head_extra %}{% endblock %}
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="nav-logo">NOVA</a>
+      <ul class="nav-links">
+        <li><a href="{% url 'landing' %}">Products</a></li>
+        <li><a href="{% url 'aboutus.landing' %}">About us</a></li>
+        <li><a href="{% url 'contactus.landing' %}">Contact us</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-socials">
+          <a href="#" aria-label="Twitter">&#120143;</a>
+          <a href="#" aria-label="Instagram">&#9678;</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+        <div class="nav-divider"></div>
+        <a href="#" class="nav-cta">Start a Project</a>
+      </div>
+      <div class="hamburger" id="ham" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="{% url 'landing' %}">Products</a>
+      <a href="{% url 'aboutus.landing' %}">About us</a>
+      <a href="{% url 'contactus.landing' %}">Contact us</a>
+      <a href="#" class="mob-cta">Start a Project &rarr;</a>
+    </div>
+
+    <div class="spacer">{% block content %} {% endblock %}</div>
+    <div class="body-container">
+      <div class="table-wrapper">{% block body %}{% endblock %}</div>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo-big">NOVA</a>
+          <p class="footer-tagline">
+            We craft extraordinary digital experiences that push boundaries and
+            leave a lasting impression.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" aria-label="Twitter">&#120143;</a>
+            <a href="#" aria-label="Instagram">&#9678;</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Dribbble">&#11041;</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Services</div>
+          <ul>
+            <li><a href="#">Brand Identity</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Motion &amp; 3D</a></li>
+            <li><a href="#">UX Strategy</a></li>
+            <li><a href="#">E-Commerce</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <div class="footer-col-title">Stay in the Loop</div>
+          <p>
+            Get our latest projects, insights, and studio news delivered to your
+            inbox.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="your@email.com" />
+            <button type="button">Go</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 <a href="#">Nova Studio</a>. All rights reserved.
+        </p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+        <div class="footer-badge">
+          <span class="badge-dot"></span>Available for projects
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("ham").classList.toggle("open");
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

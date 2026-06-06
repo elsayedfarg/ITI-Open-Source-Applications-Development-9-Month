@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<div style="text-align: center; margin-top: 50px">
+  <h1 style="color: var(--lime); font-family: var(--font-display)">
+    Welcome to TechStore
+  </h1>
+  <p style="margin: 10px">This is your homepage using the base template!</p>
+  <a href="{% url 'landing' %}" class="btn-show">Go to Products</a>
+  <a href="{% url 'admin:index' %}" class="btn-show"> Go to Admin Panel </a>
+</div>
+{% endblock %}

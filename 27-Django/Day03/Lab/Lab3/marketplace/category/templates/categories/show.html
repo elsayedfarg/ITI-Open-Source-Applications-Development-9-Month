@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% load static %} {% block head_extra %}
+<link rel="stylesheet" href="{% static 'css/categories_show.css' %}" />
+{% endblock %} {% block body %}
+
+<div class="show-page">
+  <div class="show-back">
+    <a href="{% url 'categories.landing' %}" class="back-link"
+      >&#8592; All Categories</a
+    >
+  </div>
+
+  <div class="show-hero">
+    <div class="show-hero-info">
+      <div class="show-meta">
+        <span class="badge-dot"></span>
+        <span class="show-meta-label">Category</span>
+      </div>
+      <h1 class="show-title">{{ category.name }}</h1>
+      <div class="show-dates">
+        <div class="show-date-item">
+          <span class="show-date-label">Created</span>
+          <span class="show-date-val"
+            >{{ category.created_at|date:"d M Y" }}</span
+          >
+        </div>
+        <div class="show-date-divider"></div>
+        <div class="show-date-item">
+          <span class="show-date-label">Updated</span>
+          <span class="show-date-val"
+            >{{ category.updated_at|date:"d M Y" }}</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="show-hero-img-wrap">
+      {% if category.logo %}
+      <img
+        src="{{ category.logo_url }}"
+        alt="{{ category.name }}"
+        class="show-hero-img"
+      />
+      {% else %}
+      <div class="show-hero-placeholder">
+        <span>NO IMAGE</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="show-divider"></div>
+
+  <!-- ── Products section ── -->
+  <div class="products-section">
+    <div class="products-section-header">
+      <div class="products-section-title-row">
+        <h2 class="products-section-title">Products</h2>
+        <span class="products-count">{{ category.products.count }}</span>
+      </div>
+      <p class="products-section-sub">
+        All units classified under {{ category.name }}
+      </p>
+    </div>
+
+    {% with products=category.products.all %} {% if products %}
+    <div class="products-table">
+      <div class="products-table-head">
+        <span class="col-idx">#</span>
+        <span class="col-name">Designation</span>
+        <span class="col-price">Credits</span>
+        <span class="col-arrow"></span>
+      </div>
+      {% for product in products %}
+      <a href="{% url 'product_info' product.id %}" class="products-table-row">
+        <span class="col-idx">{{ forloop.counter|stringformat:"02d" }}</span>
+        <div class="col-name">
+          {% if product.image %}
+          <img
+            src="{{ product.image.url }}"
+            alt="{{ product.name }}"
+            class="product-thumb"
+          />
+          {% else %}
+          <div class="product-thumb-placeholder"></div>
+          {% endif %}
+          <span class="product-row-name">{{ product.name }}</span>
+        </div>
+        <span class="col-price">{{ product.price }}</span>
+        <span class="col-arrow">&#8599;</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="products-empty">
+      <span class="badge-dot badge-dot--dim"></span>
+      <span>No products assigned to this category yet.</span>
+    </div>
+    {% endif %} {% endwith %}
+  </div>
+
+  <div class="show-divider"></div>
+
+  <div class="show-footer-row">
+    <a href="{% url 'categories.landing' %}" class="back-link"
+      >&#8592; Back to Categories</a
+    >
+  </div>
+</div>
+
+{% endblock %}

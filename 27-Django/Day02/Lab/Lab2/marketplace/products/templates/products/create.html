@@ -1,0 +1,73 @@
+{% extends 'base.html' %} {% load static %} {% block head_extra %}
+<link rel="stylesheet" href="{% static 'css/create.css' %}" />
+{% endblock %} {% block body %}
+<div class="body-container">
+  <div class="form-wrapper">
+    <div class="form-header">
+      <div class="badge-dot"></div>
+      <h2>Initialize Unit</h2>
+    </div>
+
+    <form
+      action="{% url 'products.create_product' %}"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+
+      <div class="nova-field">
+        <label for="name">Product Designation</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="E.G. NEURAL LINK"
+          required
+        />
+      </div>
+
+      <div class="nova-field">
+        <label for="price">Credits / Price</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          step="0.01"
+          placeholder="0.00"
+          required
+        />
+      </div>
+
+      <div class="nova-field">
+        <label for="image_url">System Image Path</label>
+        <input
+          type="file"
+          id="image_url"
+          name="image_url"
+          placeholder="images/default.jpg"
+        />
+      </div>
+
+      <div class="nova-field">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="">-- Select Category --</option>
+          {% for category in categories %}
+          <option value="{{ category.id }}">{{ category.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="nav-cta btn-submit">
+          Confirm Deployment
+        </button>
+
+        <a href="{% url 'products.index' %}" class="abort-link">
+          <u>Abort Request</u>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+/* =================== NOVA Form Styling =================== */
+.body-container {
+  padding: 3rem 4rem;
+  flex: 1; /* Ensures footer stays at bottom */
+}
+
+.form-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.5s ease-out;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+}
+
+.form-header h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.nova-field {
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nova-field label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.nova-field input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  border-radius: 8px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nova-field input:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: rgba(0, 229, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.nova-field input::placeholder {
+  color: var(--muted);
+  opacity: 0.4;
+}
+
+.form-footer {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-submit {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.abort-link {
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.abort-link:hover {
+  color: var(--coral);
+}
