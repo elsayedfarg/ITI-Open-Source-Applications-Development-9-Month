@@ -1,0 +1,1 @@
+{"version":2,"defects":{"UserTest::testCanRetrieveInitialName":7,"UserTest::testCanChangeUserName":5,"UserTest::testCanRetrieveInitialEmail":5,"UserTest::testCanChangeUserEmail":5},"times":{"UserTest::testCanRetrieveInitialName":0,"UserTest::testCanChangeUserName":0,"UserTest::testCanRetrieveInitialEmail":0,"UserTest::testCanChangeUserEmail":0}}
