@@ -1,0 +1,29 @@
+/* Background setup for the full section */
+.skills-section {
+  background-color: #404040 !important; /* Matte dark gray background */
+}
+
+/* Custom Skill bar container alignment */
+.custom-progress-wrapper {
+  background-color: #ffffff; /* Gives the remaining track space its crisp white background */
+}
+
+/* The dark grey labels on the left of each bar */
+.skill-label {
+  background-color: #8c8c8c;
+  width: 100px;
+  font-size: 0.9rem;
+  z-index: 2;
+  user-select: none;
+}
+
+/* Styling the Bootstrap Progress component inside this area */
+.custom-progress-wrapper .progress {
+  height: 32px; /* Controls the overall height of the row item */
+  background-color: transparent; /* Allows parent wrapper background to show through */
+}
+
+/* Styling the actual filled bar chunk */
+.custom-progress-wrapper .progress-bar {
+  background-color: #d9d9d9 !important; /* Soft grey filled indicator */
+}

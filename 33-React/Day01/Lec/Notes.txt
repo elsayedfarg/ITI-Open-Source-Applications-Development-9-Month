@@ -1,0 +1,266 @@
+1st Era: Static HTML + CSS
+2nd Era: HTML + CSS + JavaScript
+3rd Era: Database
+
+  SSR: Server Side Rendering
+  html => Gaps
+  Template:
+  <p> Your username is ........ </p>
+
+4th Era: CSR
+  Empty HTML + JavaScript
+
+
+Module: single file or collection of files that encapsulate related code.
+Library: Pre-written code perform specific tasks that we can reuse => you control it
+Package: Packages are a collection of related modules or Libraries
+Framework: collection of packages, libraries, and modules, with Complete Structure or Skeleton for developing application => it control you
+
+Opinionated => Obligatory/Mandatory => Libraries are chosen before
+Unopinionated => Freedom => Libraries are chosen by me
+
+Frontend => Angular - Vue.js - SvelteKit X React(Library) - Preact - AlpineJS - Svelte - jQuery(Library)
+Backend => NestJS - Django - Ruby on Rails - Laravel X Express.js - Fastify - Flask - FastAPI
+Full-stack => Next.js - Nuxt.js - Blitz.js X React + Vite - Express.js + EJS(Template Engine)
+CSS => Bootstrap X Tailwind
+
+
+HTMl + CSS + JS => Multiple-Page Application (MPA)
+AJAX => Asynchronous JavaScript and XML => Jesse James Garret 2005
+HTMl (One Page) + JS (XMLHTTPRequest + DOM Manipulation) => Dynamic Page
+
+Front-End Framework:
+Single-Page Application => SPA
+Components => Unit part of UI/Page
+
+
+React => Meta => 2013 => 19.2 => JS + TS
+CSR
+Components => One File => JSX (JavaScript + XML) => JS + CSS + HTML(Modified)
+SPA => Single Page Application
+Virtual DOM => Real DOM
+Reconciliation
+
+Stack Reconciler => O(n^3)
+React Fiber Reconciler => O(n)
+
+Bundler => Multiple JS Files => bundling into one js file
+Webpack
+Vite ✅
+RSbuild
+
+
+- Create React App
+1. Install Node.js
+2. Terminal: npm create vite@latest
+3. Empty => index.css - App.jsx - App.css
+
+
+// Class Based Components ❌
+// import React from 'react';
+// class App extends React.Component {
+//   render() {
+//     return <div>Hello Zagazig OS46</div>;
+//   }
+// }
+
+// export default App;
+
+// -------------------------------------------------
+// React After v16.8 turned to Functional Components ✅
+
+// function App() {
+//   return <div>Hello Zagazig OS46!</div>;
+// }
+
+// export default App;
+
+// -------------------------------------------------
+// ❓ Simpler way to write Components:
+// 💎 VSCode Extension: ES7+ React/Redux/React-Native snippets - dsznajder
+// 📚 Documentation: github.com/r5n-labs/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
+// 🎯 Shortcut: rafce
+
+// -------------------------------------------------
+// JSX: Javascript and XML
+// 📖 Rule No 1. => () to wrap after return keyword view with multiple lines to avoid return nothing/undefined
+// 📖 Rule No 2. => Every Component return only one (parent) element
+// 📖 Rule No 3. => use <React.Fragment> => unstyled container instead div (styled container)
+// 🎯Shortcut: <React.Fragment></React.Fragment> => <></>
+// 📖 Rule No 4. => Close Every tag => Self Closing Tags <Tag/>
+// 📖 Rule No 5. => HTMl similar syntax Converted in JSX
+
+// JavaScript => class
+// HTML => class ❌ => className (camelCase✅)
+
+// class => className
+// for => htmlFor
+// onclick => onClick
+// onchange => onChange
+// maxlength => maxLength
+// readonly => readOnly
+
+// 📖 Rule No 6. => To write JS inside HTML Part (After Return) => use Js Expression {}
+// 📖 Rule No 7. => {/* Comment */}
+
+// 📖 Rule No 8. => Insert Component into another Component => Composition => import
+
+// 📖 Rule No 9. => Event Handling => Inline Event Handler (HTML Part) => onClick={()=> expressions}, onClick={()=> {expressions}} , onClick={functionName}
+// in JS =>
+// Inline Event Handlers => <div id="root" onclick="JS"></div>
+// DOM Level 0 Event Handlers => element.onclick = () => {}
+// addEventListener() Method
+
+// 📖 Rule No 10. => How to use css => import './*css'
+// or using inline css => style = {{ css property as key : value }}
+
+// 📖 Rule No 10. => How to use Images => inside public folder <img src='image.jpg' />
+
+
+
+// Component/Style Libraries
+// 1️⃣ Pure BootStrap
+// 📚 Documentation: https://getbootstrap.com/
+// ❓How to use:
+//  1. Insert inside index.html
+/*
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous" />
+*/
+
+// 2️⃣ React BootStrap
+// 📚 Documentation: https://react-bootstrap.netlify.app/docs/getting-started/introduction
+// ❓How to use:
+// 1. Terminal: npm create vite@latest
+// 2. Terminal: npm i react-bootStrap bootStrap
+// 3. insert needed tag of these tags inside index.html (link is required)
+/*
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+  crossorigin="anonymous"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossorigin></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
+  crossorigin></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
+  crossorigin></script>
+*/
+
+// 3️⃣ Tailwindcss
+// 📚 Documentation: https://tailwindcss.com/docs/installation/using-vite
+// ❓How to use:
+// 1. Terminal: npm create vite@latest
+
+// 2. Terminal: npm i tailwindcss@latest @tailwindcss/vite@latest
+
+// 3. Replace everything in src/index.css with the following:
+// @import "tailwindcss";
+
+// 4. Update vite.config.js
+
+// import { defineConfig } from 'vite';
+// import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+// import babel from '@rolldown/plugin-babel';
+// import tailwindcss from '@tailwindcss/vite';
+
+// // https://vite.dev/config/
+// export default defineConfig({
+//   plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss()],
+// });
+
+// 4️⃣ DaisyUI
+// 📚 Documentation: https://daisyui.com/docs/install/vite/
+// ❓How to use:
+// 1. Terminal: npm create vite@latest
+
+// 2. Terminal: npm i tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+
+// 3. Replace everything in src/index.css with the following:
+// @import "tailwindcss";
+// @plugin "daisyui";
+
+// 4. Update vite.config.js
+
+// import { defineConfig } from 'vite';
+// import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+// import babel from '@rolldown/plugin-babel';
+// import tailwindcss from '@tailwindcss/vite';
+
+// // https://vite.dev/config/
+// export default defineConfig({
+//   plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss()],
+// });
+
+// 5️⃣ ShadCN
+// 📚 Documentation: https://ui.shadcn.com/docs/installation/vite#existing-vite-project
+// ❓How to Use Vite v8 (JavaScript + React Compiler), React v19.2, Tailwindcss v4.2, and Shadcn UI:
+
+// 1. Terminal: npm create vite@latest
+
+// 2. Terminal: npm i tailwindcss@latest @tailwindcss/vite@latest
+
+// 3. Replace everything in src/index.css with the following:
+// @import "tailwindcss";
+
+// 4. Create jsconfig.json inside root (not in ./src)
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     }
+//   }
+// }
+
+// 5. Update vite.config.js
+
+// import { defineConfig } from 'vite';
+// import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+// import babel from '@rolldown/plugin-babel';
+// import tailwindcss from '@tailwindcss/vite';
+
+// // https://vite.dev/config/
+// export default defineConfig({
+//   plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss()],
+//   resolve: {
+//     alias: {
+//       '@': new URL('./src', import.meta.url).pathname,
+//     },
+//   },
+// });
+
+// 6. Terminal: npx shadcn@latest init
+
+// Need to install the following packages:
+// shadcn@4.2.0
+// Ok to proceed? (y)
+// √ Select a component library » Radix
+// √ Which preset would you like to use? » Mira
+// ✔ Preflight checks.
+// ✔ Verifying framework. Found Vite.
+// ✔ Validating Tailwind CSS. Found v4.
+// ✔ Validating import alias.
+// ✔ Writing components.json.
+// ✔ Checking registry.
+// ✔ Installing dependencies.
+// ⠼ Updating files.[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+// ✔ Created 2 files:
+//   - src\components\ui\button.jsx
+//   - src\lib\utils.js
+// ✔ Updating src\index.css
+
+// Project initialization completed.
+// You may now add components.
+
+// 7. Add all Shadcn Components (Optional) => Terminal: npx shadcn@latest add --all
+

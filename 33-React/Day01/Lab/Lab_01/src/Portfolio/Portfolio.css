@@ -1,0 +1,41 @@
+/* Make cards perfectly rectangular/square-ish with a set height aspect */
+.portfolio-card {
+  min-height: 220px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Light Taupe/Gray Card Style */
+.card-light {
+  background-color: #9c9790 !important;
+  color: #ffffff !important;
+}
+
+/* Dark Slate/Charcoal Card Style */
+.card-dark {
+  background-color: #404040 !important;
+  color: #ffffff !important;
+}
+
+/* Hover effect to bring out the depth seen in your image shadow */
+.portfolio-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* The custom underline decoration for the top row titles */
+.underlined-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.underlined-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 1.5px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
