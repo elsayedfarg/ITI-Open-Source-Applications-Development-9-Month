@@ -1,0 +1,13 @@
+1-Web Server: simple html
+2-Open Wireshark: see the http packet content
+3-Visit using browser
+	Sceenshot Wireshark (html)
+---------------------------------------------
+4-Configure web server for https
+	Screenshot (browser)
+	
+5-Open Wireshark: see the https packet content
+6-Visit using browser
+	Sceenshot Wireshark (cipher)
+	
+

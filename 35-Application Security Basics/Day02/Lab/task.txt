@@ -1,0 +1,24 @@
+1-Create database
+2-Create table courses
+	coursid, coursename
+3-Create php script, uses query string id to retrieve courseid using
+	select courseid, coursename from courses where id=$id
+	Print with loop the result data set
+
+4-Using SQL MAp
+	1-Retreive the database name
+	2-Retrieve database schema
+	3-Retrieve all tables and data
+	4-Retrieve all databases in mysql
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
